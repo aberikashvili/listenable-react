@@ -1,0 +1,12 @@
+@import "../../../mixin.scss";
+
+.logout__text {
+  margin-left: 12px !important;
+  @include NavBarText;
+}
+
+@media (max-width:1133px){
+  .logout__text{
+    display: none;
+  }
+}

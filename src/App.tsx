@@ -1,34 +1,26 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import "./App.scss";
+import Dashboard from "./components/dashboard/dashboard";
+import Demographics from "./components/demographics/demographics";
+import { useEffect } from "react";
+import { Box } from "@mui/material";
+import { useStore } from "./utils/conextapi/useStore";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const { isThemeChange } = useStore();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    navigate("/dashboard");
+  }, []);
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <Box sx={isThemeChange ? {} : { background: "rgba(30, 30, 30, 1)" }}>
+      <Routes>
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/demographics" element={<Demographics />} />
+      </Routes>
+    </Box>
   );
 }
 
