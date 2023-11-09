@@ -1,0 +1,61 @@
+.row-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  
+    .third-element {
+      margin-left: auto;
+      margin-top: 5.6px;
+    }
+  
+    .second-element {
+      color: grey;
+      margin-right: 10px;
+    }
+  
+    .first-element {
+      margin-right: 20px;
+      font-weight: bold;
+    }
+  }
+  
+  .song-list {
+    list-style-type: none;
+    margin: 30px;
+  
+    .song-item {
+      margin-right: 20px;
+      clear: both;
+      margin-bottom: 10px;
+  
+      .song-picture {
+        height: 40px;
+        float: left;
+        margin-right: 15px;
+      }
+  
+      .song-name,
+      .song-listeners {
+        font-size: 14px;
+      }
+    }
+  }
+  
+  .container {
+    position: absolute;
+    top: 140px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    text-align: right;
+
+   
+  }
+  
+  .song-details {
+    margin-left: 10px;
+    display: inline-block;
+  }
+  
+  

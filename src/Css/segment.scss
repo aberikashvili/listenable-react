@@ -1,0 +1,44 @@
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 40px 70px 40px 0;
+}
+.Head-thingy{
+    display: flex;
+}
+.head-text{
+    margin-right: 10px;
+    font-weight: bold;
+
+}
+.head-second-text{
+    color: grey;
+    margin-right: 10px;
+}
+.head-third-text{
+    margin-right: 10px;
+    margin-top: 6.4px;
+}
+.musical-image
+{
+    height: 30px;
+    width: 30px;
+    float: left;
+    margin-right: 10px;
+}
+.article-title{
+    font-size: 15px;
+}
+.article-source{
+    color: grey;
+    font-size: 15px;
+}
+.article-list{
+    list-style-type: none;
+}
+.last-div{
+    clear: both;
+}
