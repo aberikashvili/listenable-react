@@ -1,7 +1,3 @@
-/* eslint-disable no-unused-vars */
-import { useState } from "react";
-
-
 function MicrophoneIcon() {
     const strokeColor = {
         stroke:"#F155BD" 
