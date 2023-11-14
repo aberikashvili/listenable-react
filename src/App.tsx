@@ -1,4 +1,4 @@
-import "./App.scss";
+import "./App.css";
 import Segment from "./centralComponents/popular/Segment";
 import NotPopular from "./centralComponents/notPopular/NotPopular";
 
