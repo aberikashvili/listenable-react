@@ -10,8 +10,11 @@ import SearchIcon from "../../Icons/Search";
 import PlayListIcon from "../../Icons/Audio-Playlist";
 import ComputerIcon from "../../Icons/Computer";
 import MicrophoneIcon from "../../Icons/Microphone";
-
 import Home from "../../Icons/Home";
+
+// import Images 
+import Logo from "../../images/Logo.png"
+import RespLogo from "../../images/responsvieLogo.png"
 
 import Navbar from "./navbar/navbar";
 import { useStore } from "../../utils/conextapi/useStore";
@@ -51,12 +54,12 @@ export default function Sidebar() {
         <img
           className="sidebar__logo"
           style={{ padding: "28px 72px 0px 17px", cursor: "pointer" }}
-          src="/src/images/Logo.png"
+          src={Logo}
           alt=""
         />
         <img
           className="sidebar__responsive_logo"
-          src="/src/images/responsvieLogo.png"
+          src={RespLogo}
         />
       </Link>
       <Box sx={{ marginTop: "60px" }}>
