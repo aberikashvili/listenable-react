@@ -25,15 +25,10 @@ const rows = [
 const Demographic = () => {
   return (
     <Box
+      className="demographic-wrapper"
       sx={{
-        maxWidth: "821px",
-        width: "100%",
-        maxHeight: "318px",
-        height: "100%",
-        borderRadius: "10px",
         border: "1px solid  #F0F0F0",
-        background: " #FFF",
-        boxSizing: "border-box",
+        borderRadius: "10px",
       }}
     >
       <Box sx={{ display: "flex", justifyContent: "space-between", p: 2 }}>

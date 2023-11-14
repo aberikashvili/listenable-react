@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Box, TextField } from "@mui/material";
+import { Box } from "@mui/material";
 import CalendarMonthOutlinedIcon from "@mui/icons-material/CalendarMonthOutlined";
 import { DateRange } from "react-date-range";
 import format from "date-fns/format";
@@ -7,7 +7,12 @@ import { addDays } from "date-fns";
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
 
+import "./CustomeDatePicker.scss";
+
 const CustomDatePicker = () => {
+  const refOne = useRef<HTMLElement>(null);
+
+  const [isOpen, setIsOpen] = useState(false);
   const [range, setRange] = useState([
     {
       startDate: new Date(),
@@ -15,10 +20,6 @@ const CustomDatePicker = () => {
       key: "selection",
     },
   ]);
-
-  const [isOpen, setIsOpen] = useState(false);
-
-  const refOne = useRef<HTMLElement>(null);
 
   useEffect(() => {
     document.addEventListener("keydown", hideOnEscape, true);
@@ -46,42 +47,29 @@ const CustomDatePicker = () => {
   };
 
   return (
-    <Box className="calendarWrap" sx={{ position: "relative" }}>
-      <TextField
-        sx={{
-          "& .css-1q6at85-MuiInputBase-root-MuiOutlinedInput-root": {
-            height: "26px",
-            width: "175px",
-            fontSize: "12px",
-            paddingLeft: "18px",
-          },
-        }}
-        InputProps={{
-          startAdornment: (
-            <CalendarMonthOutlinedIcon
-              onClick={(e) => {
-                e.stopPropagation();
-                toggleCalendar();
-              }}
-              sx={{
-                cursor: "pointer",
-                position: "absolute",
-                width: "18px",
-                left: 0,
-                top: "50%",
-                transform: "translateY(-50%)",
-              }}
-            />
-          ),
-        }}
-        value={`${format(range[0].startDate, "d MMM yyyy")} to ${format(
+    <Box sx={{ position: "relative" }}>
+      <Box className="input-box" onClick={toggleCalendar}>
+        {`${format(range[0].startDate, "d MMM yyyy")} to ${format(
           range[0].endDate,
           "d MMM yyyy"
         )}`}
-        // readOnly
-        className="inputBox"
-        onClick={toggleCalendar}
-      />
+        <CalendarMonthOutlinedIcon
+          className="calendarIcon"
+          onClick={(e) => {
+            e.stopPropagation();
+            toggleCalendar();
+          }}
+          sx={{
+            cursor: "pointer",
+            position: "absolute",
+            width: "18px",
+            left: 0,
+            top: "50%",
+            transform: "translateY(-50%)",
+          }}
+        />
+      </Box>
+
       {isOpen && (
         <Box
           ref={refOne}
