@@ -1,6 +1,6 @@
+import { useEffect, useRef, useState } from "react";
 import { Box, TextField } from "@mui/material";
 import CalendarMonthOutlinedIcon from "@mui/icons-material/CalendarMonthOutlined";
-import { useEffect, useRef, useState } from "react";
 import { DateRange } from "react-date-range";
 import format from "date-fns/format";
 import { addDays } from "date-fns";
@@ -49,7 +49,7 @@ const CustomDatePicker = () => {
     <Box className="calendarWrap" sx={{ position: "relative" }}>
       <TextField
         sx={{
-          ".css-1q6at85-MuiInputBase-root-MuiOutlinedInput-root": {
+          "& .css-1q6at85-MuiInputBase-root-MuiOutlinedInput-root": {
             height: "26px",
             width: "175px",
             fontSize: "12px",
