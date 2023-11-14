@@ -4,7 +4,8 @@ import Dashboard from "./components/dashboard/dashboard";
 import Demographics from "./components/demographics/demographics";
 import { useEffect } from "react";
 import { Box } from "@mui/material";
-import { useStore } from "./utils/conextapi/useStore";
+import { useStore } from "./utils/useStore";
+import Episode from "./pages/episode/Episode";
 
 function App() {
   const { isThemeChange } = useStore();
@@ -19,6 +20,7 @@ function App() {
       <Routes>
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/demographics" element={<Demographics />} />
+        <Route path="/episode" element={<Episode />} />
       </Routes>
     </Box>
   );

@@ -2,7 +2,7 @@ import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import "./logout.scss";
 import LogOutPopUp from "./logoutPopup/logoutpopup";
-import { useStore } from "../../../utils/conextapi/useStore";
+import { useStore } from "../../../utils/useStore";
 
 function Logout() {
   const { setIsOpen } = useStore();

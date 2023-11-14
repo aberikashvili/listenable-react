@@ -1,4 +1,4 @@
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 import "../../mixin.scss";
 import "./navbar.scss";
 // importing mui
@@ -14,7 +14,7 @@ import MicrophoneIcon from "../../Icons/Microphone";
 import Home from "../../Icons/Home";
 
 import Navbar from "./navbar/navbar";
-import { useStore } from "../../utils/conextapi/useStore";
+import { useStore } from "../../utils/useStore";
 import Theme from "./theme/theme";
 import UserProfile from "./User/user";
 import Logout from "./logoutbutton/logout";
@@ -62,10 +62,7 @@ export default function Sidebar() {
       <Box sx={{ marginTop: "60px" }}>
         {/* Title Here */}
         <Box>
-          <Typography
-            sx={{ marginLeft: "16px" }}
-            className="nav__text"
-          >
+          <Typography sx={{ marginLeft: "16px" }} className="nav__text">
             Navigation
           </Typography>
         </Box>
@@ -100,7 +97,7 @@ export default function Sidebar() {
             active={currectPage === "Popular Segments"}
           />
         </Link>
-        <Link style={{ textDecoration: "none" }} to={"popularepisodes"}>
+        <Link style={{ textDecoration: "none" }} to={"/episode"}>
           <Navbar
             Title={windowWidth > 1133 ? "Popular Episodes" : "Episodes"}
             Icon={<AudioIcon />}

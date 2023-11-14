@@ -1,6 +1,6 @@
-import { Box,  Typography } from "@mui/material";
-import {  useRef } from "react";
-import { useStore } from "../../../../utils/conextapi/useStore";
+import { Box, Typography } from "@mui/material";
+import { useRef } from "react";
+import { useStore } from "../../../../utils/useStore";
 import "./logoutpopup.scss";
 
 function LogOutPopUp() {
@@ -24,7 +24,7 @@ function LogOutPopUp() {
   }
 
   // inline styless
-  const Pstyle:object = {
+  const Pstyle: object = {
     cursor: "pointer",
     fontWeight: "700",
     color: isThemeChange ? "rgba(20, 24, 31, 1)" : "white",
@@ -40,9 +40,8 @@ function LogOutPopUp() {
     borderRadius: "5px",
     cursor: "pointer",
     fontSize: "16px",
-    background:isThemeChange ? "" : "transparent",
-    color:isThemeChange ? "" :" white"
-
+    background: isThemeChange ? "" : "transparent",
+    color: isThemeChange ? "" : " white",
   };
   return (
     <Box
@@ -91,7 +90,9 @@ function LogOutPopUp() {
           Are you sure you want to delete this ? This action cannot be undone
         </Typography>
         <Box className="buttons__container">
-          <button onClick={()=>setIsOpen(false)} style={buttonTheme}>Cancel</button>
+          <button onClick={() => setIsOpen(false)} style={buttonTheme}>
+            Cancel
+          </button>
           <button
             style={{
               background: "rgba(255, 178, 100, 1)",

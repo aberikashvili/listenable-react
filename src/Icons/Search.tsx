@@ -1,14 +1,4 @@
 function SearchIcon() {
-  const iconStyle = {
-    width: "24px",
-    height: "24px",
-    fill: "none",
-    stroke: "#F155BD",
-    strokeWidth: "1.5",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-  };
-  
   return (
     <svg
       width="24"
@@ -16,7 +6,10 @@ function SearchIcon() {
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      style={iconStyle}
+      stroke="#F155BD"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     >
       <path d="M22 11.5C22 9.52221 21.4135 7.58879 20.3147 5.94429C19.2159 4.2998 17.6542 3.01807 15.8269 2.26119C13.9996 1.50431 11.9889 1.30631 10.0491 1.69216C8.10927 2.07801 6.32748 3.03045 4.92896 4.42898C3.53043 5.8275 2.578 7.60928 2.19214 9.54909C1.80629 11.4889 2.00436 13.4996 2.76123 15.3269C3.51811 17.1541 4.79985 18.7159 6.44434 19.8147C8.08883 20.9135 10.0222 21.5 12 21.5" />
       <path d="M2 11.5H22" />
