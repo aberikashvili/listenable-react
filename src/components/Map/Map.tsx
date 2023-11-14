@@ -335,10 +335,10 @@ const Map = () => {
   };
 
   return (
-    <Box mx={{ mb: 2 }} position="relative">
+    <Box sx={{ bottom: "30px", position: "relative" }}>
       {info && (
         <Box
-          id="info-box"
+          className="info-box"
           sx={{
             position: "absolute",
             top: mousePosition.y,
