@@ -16,7 +16,7 @@ function App() {
   }, []);
 
   return (
-    <Box sx={isThemeChange ? {} : { background: "rgba(30, 30, 30, 1)" }}>
+    <Box sx={isThemeChange ? {} : { background: "#1e1e1e" }}>
       <Routes>
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/demographics" element={<Demographics />} />

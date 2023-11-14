@@ -2,6 +2,7 @@ import { Box, Card, Typography } from "@mui/material";
 import ControlledOpenSelect from "./Select";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { useStore } from "../../../utils/useStore";
 
 type Item = {
   body: string;
@@ -11,6 +12,7 @@ type Item = {
 };
 
 function Segment() {
+  const { isThemeChange } = useStore();
   const [items, setItems] = useState<Item[]>([]);
 
   useEffect(() => {
@@ -36,15 +38,29 @@ function Segment() {
     >
       <Card
         elevation={3}
-        sx={{
-          paddingTop: "10px",
-          width: "821px",
-          height: "337px",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          marginBottom: "9px",
-        }}
+        sx={
+          isThemeChange
+            ? {
+                paddingTop: "10px",
+                width: "821px",
+                height: "337px",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                marginBottom: "9px",
+              }
+            : {
+                paddingTop: "10px",
+                width: "821px",
+                height: "337px",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                marginBottom: "9px",
+                background: "#1e1e1e",
+                color: "#FFF",
+              }
+        }
       >
         <Box
           sx={{
@@ -133,7 +149,17 @@ function Segment() {
                           }}
                         >
                           View Count:
-                          <span style={{ color: "#121111" }}>14k</span>
+                          <span
+                            style={
+                              isThemeChange
+                                ? { color: "#121111" }
+                                : {
+                                    color: "#fff",
+                                  }
+                            }
+                          >
+                            14k
+                          </span>
                         </Typography>
                       </Box>
                     </Box>
@@ -158,11 +184,19 @@ function Segment() {
                         </Typography>
 
                         <Typography
-                          sx={{
-                            fontSize: "10px",
-                            fontWeight: "400",
-                            color: "#121111",
-                          }}
+                          sx={
+                            isThemeChange
+                              ? {
+                                  fontSize: "10px",
+                                  fontWeight: "400",
+                                  color: "#121111",
+                                }
+                              : {
+                                  fontSize: "10px",
+                                  fontWeight: "400",
+                                  color: "#fff",
+                                }
+                          }
                         >
                           Retention rate:3.8%
                         </Typography>
@@ -190,7 +224,17 @@ function Segment() {
                           }}
                         >
                           Downloads:
-                          <span style={{ color: "#121111" }}>14k</span>
+                          <span
+                            style={
+                              isThemeChange
+                                ? { color: "#121111" }
+                                : {
+                                    color: "#fff",
+                                  }
+                            }
+                          >
+                            14k
+                          </span>
                         </Typography>
                       </Box>
                     </Box>

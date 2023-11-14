@@ -2,6 +2,7 @@ import { Box, Card, Typography } from "@mui/material";
 import ControlledOpenSelect from "../popular/Select";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { useStore } from "../../../utils/useStore";
 
 type Item = {
   body: string;
@@ -10,6 +11,7 @@ type Item = {
   userId: number;
 };
 function NotPopular() {
+  const { isThemeChange } = useStore();
   const [items, setItems] = useState<Item[]>([]);
 
   useEffect(() => {
@@ -24,6 +26,7 @@ function NotPopular() {
     };
     fetchData();
   }, []);
+
   return (
     <Box
       sx={{
@@ -34,15 +37,29 @@ function NotPopular() {
     >
       <Card
         elevation={3}
-        sx={{
-          paddingTop: "10px",
-          width: "821px",
-          height: "337px",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          marginTop: "9px",
-        }}
+        sx={
+          isThemeChange
+            ? {
+                paddingTop: "10px",
+                width: "821px",
+                height: "337px",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                marginTop: "9px",
+              }
+            : {
+                paddingTop: "10px",
+                width: "821px",
+                height: "337px",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                marginTop: "9px",
+                background: "#1e1e1e",
+                color: "#FFF",
+              }
+        }
       >
         <Box
           sx={{
@@ -129,7 +146,17 @@ function NotPopular() {
                         }}
                       >
                         Downloads:
-                        <span style={{ color: "#121111" }}>{item.userId}k</span>
+                        <span
+                          style={
+                            isThemeChange
+                              ? { color: "#121111" }
+                              : {
+                                  color: "#fff",
+                                }
+                          }
+                        >
+                          {item.userId}k
+                        </span>
                       </Typography>
                     </Box>
                   </Box>

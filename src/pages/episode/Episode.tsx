@@ -1,9 +1,19 @@
-import { Box, Card, Table, Typography } from "@mui/material";
+import { Box, Card, Typography } from "@mui/material";
 import NotPopular from "../../components/centralComponents/notPopular/NotPopular";
 import Sidebar from "../../components/sidebar/sidebar";
 import Charts from "./Charts";
+import EpisodeTable from "./Table";
 
 function Episode() {
+  const table = [
+    { city: "New York", downloads: 1200, listeningTime: "12111m" },
+    {
+      city: "New Jersy",
+      downloads: 14000,
+      listeningTime: "34252m",
+    },
+  ];
+
   return (
     <Box sx={{ display: "flex" }}>
       <Sidebar />
@@ -139,7 +149,8 @@ function Episode() {
                 borderRadius: "6px",
               }}
             >
-              <Table />
+              {" "}
+              <EpisodeTable table={table} />
             </Box>
           </Box>
         </Card>

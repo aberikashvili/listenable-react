@@ -24,7 +24,6 @@ export default function Sidebar() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
-    // Function to update window width when the window is resized
     function handleResize() {
       setWindowWidth(window.innerWidth);
     }
