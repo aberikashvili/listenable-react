@@ -1,0 +1,46 @@
+.main_container {
+  width: 100%;
+  margin: 17px;
+  padding: 16px;
+  border: 2px solid lightgrey;
+  border-radius: 10px;
+
+  .map_container {
+    display: flex;
+    justify-content: space-between;
+    height: 332px;
+    margin-bottom: 12px;
+   
+  }
+  .map {
+
+    width:60%;
+  }
+}
+
+  .date_filter {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    margin-top: 14px;
+  }
+  
+  .states_info {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    margin-top: 16px;
+  }
+
+  .charts{
+    border-top: 2px solid lightgrey;
+
+    .age_gender{
+      margin-top: 23px;
+      .chart_description{
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
