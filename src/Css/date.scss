@@ -1,0 +1,52 @@
+
+.input-box {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  right: 0;
+  font-size: 13px;
+  .calendarIcon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+  }
+}
+.calendarElement {
+  position: absolute;
+  margin-top: 40px; 
+left: 999px; 
+  z-index: 999;
+  background: #fff;
+  border: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
