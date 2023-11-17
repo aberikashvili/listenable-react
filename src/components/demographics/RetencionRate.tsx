@@ -7,7 +7,7 @@ import { PieChart } from "@mui/x-charts/PieChart";
 const pieParams = { height: 200, margin: { right: 5 } };
 const defaultColor = "#F3F5F8";
 
-export default function RetencionRate() {
+ const RetencionRate = () =>{
   const [hoveredValue, setHoveredValue] = useState(null);
   const totalPercentage = 100;
 
@@ -112,3 +112,5 @@ export default function RetencionRate() {
     </Stack>
   );
 }
+
+export default RetencionRate

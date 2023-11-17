@@ -72,6 +72,8 @@ export const data = {
   ],
 };
 
-export default function AgeGenderChart() {
+const AgeGenderChart = () => {
   return <Bar options={options} data={data} style={chartStyle} />;
-}
+};
+
+export default AgeGenderChart;

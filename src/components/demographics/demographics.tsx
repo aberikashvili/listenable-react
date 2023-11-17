@@ -29,6 +29,8 @@ import states from "../../../public/map/usa.json";
 import DataTable from "./DataTable";
 import AgeGenderChart from "./AgeGenderChart";
 import RetencionRate from "./RetencionRate";
+import PopEpisodes from "./PopEpisodes";
+import PopSegments from "./PopSegments";
 
 const geoUrl = "https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json";
 
@@ -243,7 +245,10 @@ const MapChart = () => {
             </Box>
           </Box>
         </Box>
-        <Box className="retention_rate"></Box>
+      </Box>
+      <Box className='segments' sx={{display:'flex',  alignItems:'center', justifyContent:'space-between', marginTop:'13px'}}>
+        <PopEpisodes/>
+        <PopSegments/>
       </Box>
     </Box>
   );

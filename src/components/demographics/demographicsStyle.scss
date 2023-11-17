@@ -10,37 +10,35 @@
     justify-content: space-between;
     height: 332px;
     margin-bottom: 12px;
-   
   }
   .map {
-
-    width:60%;
+    width: 60%;
   }
 }
 
-  .date_filter {
-    display: flex;
-    flex-direction: row;
-    gap: 6px;
-    margin-top: 14px;
-  }
-  
-  .states_info {
-    display: flex;
-    flex-direction: row;
-    gap: 16px;
-    margin-top: 16px;
-  }
+.date_filter {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  margin-top: 14px;
+}
 
-  .charts{
-    border-top: 2px solid lightgrey;
+.states_info {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  margin-top: 16px;
+}
 
-    .age_gender{
-      margin-top: 23px;
-      .chart_description{
-        display: flex;
-        align-items: center;
-      }
+.charts {
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+
+  .age_gender {
+    margin-top: 23px;
+    .chart_description {
+      display: flex;
+      align-items: center;
     }
   }
-
+}

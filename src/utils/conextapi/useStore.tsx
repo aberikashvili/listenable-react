@@ -1,5 +1,6 @@
 import { createContext, useContext, useState } from "react";
 import { CssBaseline } from "@mui/material";
+import { PopEpisodes } from "../../components/Demographics/PopEpisodes";
 
 type StoreContextProps = {
   currectPage: string;
@@ -8,6 +9,10 @@ type StoreContextProps = {
   setIsThemeChange: (themeChange: boolean) => void;
   isOpen: boolean;
   setIsOpen: (open: boolean) => void;
+  popEpisodes: PopEpisodes[];
+  setPopEpisodes: (open: boolean) => void;
+  popSegments: PopEpisodes[];
+  setPopSegments: (open: boolean) => void;
 };
 
 export const StoreContext = createContext({} as StoreContextProps);
@@ -20,6 +25,8 @@ type StorProps = {
 
 const StoreProvider = ({ children }: StorProps) => {
   const [currectPage, setCurrectPage] = useState("dashboard");
+  const [popEpisodes, setPopEpisodes] = useState([]);
+  const [popSegments, setPopSegments] = useState([]);
   const [isThemeChange, setIsThemeChange] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
   const store = {
@@ -29,6 +36,10 @@ const StoreProvider = ({ children }: StorProps) => {
     setIsThemeChange,
     isOpen,
     setIsOpen,
+    popEpisodes,
+    setPopEpisodes,
+    popSegments,
+    setPopSegments,
   };
 
   return (
