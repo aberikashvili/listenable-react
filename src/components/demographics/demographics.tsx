@@ -28,6 +28,7 @@ import Filter from "../../../public/icons/Filter.svg";
 import states from "../../../public/map/usa.json";
 import DataTable from "./DataTable";
 import AgeGenderChart from "./AgeGenderChart";
+import RetencionRate from "./RetencionRate";
 
 const geoUrl = "https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json";
 
@@ -188,8 +189,12 @@ const MapChart = () => {
       <Box className="charts">
         <Box className="age_gender">
           <Box className="chart_description">
-            <Typography sx={{marginRight:'33px', fontSize:'16px', fontWeight:'700'}}>Age and Gender</Typography>
-            <Box sx={{display:'flex', gap:'30px'}}>
+            <Typography
+              sx={{ marginRight: "33px", fontSize: "16px", fontWeight: "700" }}
+            >
+              Age and Gender
+            </Typography>
+            <Box sx={{ display: "flex", gap: "30px" }}>
               <Box sx={{ display: "flex", alignItems: "center", gap: "6px" }}>
                 <div
                   style={{
@@ -222,8 +227,20 @@ const MapChart = () => {
               </Box>
             </Box>
           </Box>
-          <Box className='chart_details'>
-            <AgeGenderChart/>
+          <Box
+            className="chart_details"
+            sx={{
+              display: "flex",
+              width: "100%",
+              justifyContent: "space-between",
+            }}
+          >
+            <Box sx={{ width: "60%" }}>
+              <AgeGenderChart />
+            </Box>
+            <Box sx={{ width: "40%" }}>
+              <RetencionRate />
+            </Box>
           </Box>
         </Box>
         <Box className="retention_rate"></Box>
