@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import music from '../img/music.png'
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import '../Css/songs.scss'
@@ -17,7 +17,7 @@ function PopularTopics() {
  }, []);
  async function fetchSongs() {
   try {
-   const apiKey = "a0acb8cde550ffd6ee2930acf20a72d0";
+  //  const apiKey = "a0acb8cde550ffd6ee2930acf20a72d0";
    const response = await fetch(
     "https://ws.audioscrobbler.com/2.0/?method=chart.gettoptracks&api_key=a0acb8cde550ffd6ee2930acf20a72d0&format=json&limit=3"
    );
@@ -28,7 +28,7 @@ function PopularTopics() {
    if (!data.tracks || !data.tracks.track) {
     throw new Error("Data structure from API is unexpected");
    }
-   const songData = data.tracks.track.map((track: { name: any; listeners: string; image: { [x: string]: any; }[]; }) => ({
+   const songData = data.tracks.track.map((track: { name: never; listeners: string; image: { [x: string]: never; }[]; }) => ({
     name: track.name,
     listeners: parseInt(track.listeners, 10),
     image: track.image[2]["#text"] || "",
