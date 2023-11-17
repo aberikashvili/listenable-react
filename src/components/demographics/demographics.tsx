@@ -31,6 +31,7 @@ import AgeGenderChart from "./AgeGenderChart";
 import RetencionRate from "./RetencionRate";
 import PopEpisodes from "./PopEpisodes";
 import PopSegments from "./PopSegments";
+import DatePicker from "./DatePicker";
 
 const geoUrl = "https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json";
 
@@ -82,9 +83,7 @@ const MapChart = () => {
           <Button variant="outlined" size="small" sx={{ color: "#808080" }}>
             Chart
           </Button>
-          <Button variant="outlined" size="small" sx={{ color: "#808080" }}>
-            1Jan 2022 to 16 Sep 2022
-          </Button>
+          <DatePicker/>
         </Box>
       </Box>
 
