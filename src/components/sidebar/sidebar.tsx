@@ -96,7 +96,7 @@ export default function Sidebar() {
             active={currectPage === "Popular Segments"}
           />
         </Link>
-        <Link style={{ textDecoration: "none" }} to={"/episode"}>
+        <Link style={{ textDecoration: "none" }} to={"/episode/demographics"}>
           <Navbar
             Title={windowWidth > 1133 ? "Popular Episodes" : "Episodes"}
             Icon={<AudioIcon />}

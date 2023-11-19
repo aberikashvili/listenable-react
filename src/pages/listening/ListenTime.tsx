@@ -1,21 +1,13 @@
 import { Box, Card, Typography } from "@mui/material";
 import NotPopular from "../../components/centralComponents/notPopular/NotPopular";
 import Sidebar from "../../components/sidebar/sidebar";
-import Charts from "./Charts";
-import EpisodeTable from "./Table";
 import { useStore } from "../../utils/useStore";
+import Chart from "./Chart";
+import Chart2 from "./Chart2";
 import { Link } from "react-router-dom";
 
-function Episode() {
+function ListenTime() {
   const { isThemeChange } = useStore();
-  const table = [
-    { city: "New York", downloads: 1200, listeningTime: "12111m" },
-    {
-      city: "New Jersy",
-      downloads: 14000,
-      listeningTime: "34252m",
-    },
-  ];
 
   return (
     <Box sx={{ display: "flex" }}>
@@ -58,8 +50,10 @@ function Episode() {
                       fontFamily: "roboto",
                       fontSize: "16px",
                       fontWeight: "500",
+                      marginBottom: "16px",
                     }
                   : {
+                      marginBottom: "16px",
                       color: "#fff",
                       fontFamily: "roboto",
                       fontSize: "16px",
@@ -69,7 +63,13 @@ function Episode() {
             >
               Episode
             </Typography>
-            <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
+            >
               <Box sx={{ display: "flex" }}>
                 <img
                   src=""
@@ -116,96 +116,75 @@ function Episode() {
                   </Typography>
                 </Box>
               </Box>
-              <Box sx={{ display: "flex", gap: "10px" }}>
-                <Typography
-                  sx={{
+              <Typography
+                sx={{
+                  color: "#909090",
+                  fontFamily: "roboto",
+                  fontSize: "12px",
+                  fontWeight: "400",
+                  textAlign: "right",
+                }}
+              >
+                Downloads{" "}
+                <span
+                  style={{
                     fontSize: "12px",
                     fontWeight: "400",
-                    color: "#909090",
-                    fontFamily: "Roboto",
-                    border: "1px solid #f0f0f0",
-                    borderRadius: "3px",
-                    padding: "6px 10px",
+                    color: "#000",
+                    textAlign: "right",
                   }}
                 >
-                  Ave listen Time{" "}
-                  <span
-                    style={
-                      isThemeChange ? { color: "#121111" } : { color: "#fff" }
-                    }
-                  >
-                    11:00
-                  </span>
+                  14K
+                </span>
+              </Typography>
+            </Box>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "space-between",
+                width: "100%",
+              }}
+            >
+              <Box sx={{ display: "flex", gap: "30px", padding: "25px" }}>
+                <Link
+                  to={"/episode/demographics"}
+                  style={{
+                    textDecoration: "none",
+                    color: "#909090",
+                    fontSize: "16px",
+                    fontWeight: "400",
+                  }}
+                >
+                  Demographics
+                </Link>
+                <Typography
+                  sx={{ color: "#F155BD", fontSize: "16px", fontWeight: "500" }}
+                >
+                  Listen tim
                 </Typography>
                 <Typography
                   sx={{
-                    fontSize: "12px",
-                    fontWeight: "400",
+                    textDecoration: "none",
                     color: "#909090",
-                    fontFamily: "Roboto",
-                    border: "1px solid #f0f0f0",
-                    padding: "6px 10px",
+                    fontSize: "16px",
+                    fontWeight: "400",
                   }}
                 >
-                  Ave listen Time{" "}
-                  <span
-                    style={
-                      isThemeChange ? { color: "#121111" } : { color: "#fff" }
-                    }
-                  >
-                    11:00
-                  </span>
+                  Segments
                 </Typography>
-                <Typography
-                  sx={{
-                    fontSize: "12px",
-                    fontWeight: "400",
-                    color: "#909090",
-                    fontFamily: "Roboto",
-                    border: "1px solid #f0f0f0",
-                    padding: "6px 10px",
-                  }}
-                >
-                  Ave listen Time{" "}
-                  <span
-                    style={
-                      isThemeChange ? { color: "#121111" } : { color: "#fff" }
-                    }
-                  >
-                    11:00
-                  </span>
-                </Typography>
+                <Box>
+                  <Box sx={{ border: "1px solid #090909" }}>Cart</Box>
+                  {/* <DateRangePicker
+                    slots={{ field: SingleInputDateRangeField }}
+                    slotProps={{
+                      textField: { InputProps: { endAdornment: <Calendar /> } },
+                    }}
+                  /> */}
+                </Box>
               </Box>
             </Box>
-            <Box sx={{ display: "flex", gap: "30px", padding: "15px" }}>
-              <Typography
-                sx={{ color: "#F155BD", fontSize: "16px", fontWeight: "500" }}
-              >
-                Demographics
-              </Typography>
-              <Link
-                to={"/episode/listening_time"}
-                style={{
-                  textDecoration: "none",
-                  color: "#909090",
-                  fontSize: "16px",
-                  fontWeight: "400",
-                }}
-              >
-                Listening time
-              </Link>
-              <Typography
-                style={{
-                  textDecoration: "none",
-                  color: "#909090",
-                  fontSize: "16px",
-                  fontWeight: "400",
-                }}
-              >
-                Segments
-              </Typography>
-            </Box>
           </Box>
+          <Chart />
           <Box
             sx={{
               display: "flex",
@@ -213,27 +192,18 @@ function Episode() {
               borderTop: "1px solid #EAEAEA",
               paddingTop: "14px",
             }}
-          >
-            <Charts />
-            <Box
-              sx={{
-                width: "410px",
-                height: "326px",
-                border: "1px solid #EAEAEA",
-                borderRadius: "6px",
-              }}
-            >
-              {" "}
-              <EpisodeTable table={table} />
-            </Box>
-          </Box>
+          ></Box>
         </Card>
-        <Box sx={{ padding: "15px" }}>
-          <NotPopular width={"1157px"} />
+        <Box sx={{ display: "flex", justifyContent: "space-evenly" }}>
+          <NotPopular width={"787px"} />
+
+          <Card sx={{ width: "354px", marginTop: "9px", padding: "16px" }}>
+            <Chart2 />
+          </Card>
         </Box>
       </Box>
     </Box>
   );
 }
 
-export default Episode;
+export default ListenTime;

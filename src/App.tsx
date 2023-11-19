@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import { Box } from "@mui/material";
 import { useStore } from "./utils/useStore";
 import Episode from "./pages/episode/Episode";
+import ListenTime from "./pages/listening/ListenTime";
 
 function App() {
   const { isThemeChange } = useStore();
@@ -20,7 +21,8 @@ function App() {
       <Routes>
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/demographics" element={<Demographics />} />
-        <Route path="/episode" element={<Episode />} />
+        <Route path="/episode/demographics" element={<Episode />} />
+        <Route path="/episode/listening_time" element={<ListenTime />} />
       </Routes>
     </Box>
   );

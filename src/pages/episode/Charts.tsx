@@ -2,15 +2,15 @@ import { BarChart } from "@mui/x-charts/BarChart";
 
 const Male = {
   data: [2, 3, 1, 4, 5],
-  label: "Series A",
+  label: "Male",
 };
 const Female = {
   data: [3, 1, 4, 2, 1],
-  label: "Series B",
+  label: "Female",
 };
 const Other = {
   data: [7, 7, 7, 7, 7],
-  label: "Series C",
+  label: "Other",
 };
 function Charts() {
   return (
