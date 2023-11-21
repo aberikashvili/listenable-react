@@ -1,5 +1,6 @@
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import '../Css/segment.scss';
+import Vector from '../img/Vector.png'
 
 const staticArticles = [
   {
@@ -24,16 +25,14 @@ const staticArticles = [
 
 function PopularSongs() {
   return (
-    <div>
-      <div className="container">
-      </div>
+<div className='segment-container'>
       <div>
         <div className="Head-thingy">
-          <p className="head-text">Popular Topics</p>
+          <h4 className="head-text">Popular Topics</h4>
           <p className="head-second-text">See all</p>
           <p className="head-third-text">Daily <ArrowDropDownIcon style={{cursor: 'pointer'}} /> </p>
         </div>
-        <div className="content">
+        
           <ul className="article-list">
             {staticArticles.map((article, index) => (
               <li key={index} className="article-item">
@@ -41,18 +40,20 @@ function PopularSongs() {
                   className="musical-image"
                   src={article.urlToImage}
                   alt={article.title}
+                
                 />
-                <div className="article-details">
+                <img className="vector-pic" src={Vector} alt="stock-pic" style={{marginRight: "-130px"}} />
+                
+                
                   <p className="article-title">{article.title}</p>
                   <p className="article-source">{article.source}</p>
-                </div>
+               
                 <div className="last-div"></div>
               </li>
             ))}
           </ul>
         </div>
-      </div>
-    </div>
+        </div>
   );
 }
 

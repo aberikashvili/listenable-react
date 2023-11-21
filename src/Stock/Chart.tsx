@@ -38,6 +38,8 @@ function Chart() {
   };
   return (
     <div className="charts_container">
+       <p className ="first__element">   Views </p>
+       <h4 className='second__element'>512K </h4>
       <Line data={data} options={options}></Line>
     </div>
   );

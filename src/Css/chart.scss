@@ -1,7 +1,27 @@
 .chart-container{
     position: absolute;
-    top: 120px;
-    right: 20px;
+    top: 220px;
+    right: 30px;
     width: 120px;
     height: 400px;
+    // padding: 20px;
+    // border: 1px solid red;
+    
+}
+.chart_element{
+    color: grey;
+    position: absolute;
+    font-size: 14px;
+    left: -100px;
+    top: -11px;  
+}
+.second-chart-element{
+    position: absolute;
+    left: -95px;
+    top: 5px;
+}
+.chart_statistics{
+    position: absolute;
+    left: -5px;
+    top: 45px;
 }

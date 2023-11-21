@@ -2,6 +2,7 @@ import '../Css/chart.scss';
 
 import { Line } from "react-chartjs-2";
 import { Chart as ChartJS, LineElement, CategoryScale, LinearScale, PointElement } from "chart.js";
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 ChartJS.register(LineElement, CategoryScale, LinearScale, PointElement);
 
@@ -38,6 +39,9 @@ function StockChart() {
   };
   return (
     <div className="chart-container">
+      <p className="chart_element" >Lis Time </p>
+      <h4 className='second-chart-element'> 512K </h4>
+      <p className='chart_statistics'>All Stats <ArrowForwardIosIcon style={{position: "absolute", marginTop: "-3px", width: "20px", cursor: "pointer"}}/> </p>
       <Line data={data} options={options}></Line>
     </div>
   );

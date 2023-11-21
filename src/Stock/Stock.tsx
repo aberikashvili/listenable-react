@@ -38,12 +38,14 @@ function Stock() {
   };
   return (
     <div className="stock-container">
-        <div className='labels'>
+        {/* <div className='labels'>
             <h5 className ="label-one" > Daily < ArrowDropDownIcon style={{cursor: 'pointer'}}/></h5>
-            <h5 className ="label-two" >General Traffic</h5>
-            <h4 className ="label-three">   Downloads  </h4>
-            <h4 className ="label-four"> 512K </h4>
-        </div>
+            
+        </div> */}
+         <h5 className ="label-one" > Daily < ArrowDropDownIcon style={{cursor: 'pointer'}}/></h5>
+         <h4 className ="label-two" >General Traffic</h4>
+         <p className ="label-three">   Downloads  </p>
+          <h4 className ="label-four"> 512K </h4>
       <Line data={data} options={options}></Line>
     </div>
   );

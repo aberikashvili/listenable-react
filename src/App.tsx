@@ -1,4 +1,3 @@
-import './Css/segment.scss'
 import PopularTopics from "./topics/PopularTopics";
 import StockChart from "./Stock/StockChart";
 import PopularSongs from "./Songs/PopularSongs";
