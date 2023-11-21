@@ -6,7 +6,8 @@
   padding: 8px 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  right: 0;
+  right: 12px;
+  margin-top: -680px;
   font-size: 13px;
   .calendarIcon {
     position: absolute;
@@ -20,28 +21,13 @@
 }
 .calendarElement {
   position: absolute;
-  margin-top: 40px; 
+  margin-top: -630px; 
 left: 999px; 
   z-index: 999;
   background: #fff;
   border: 1px;
+  margin-left: 150px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

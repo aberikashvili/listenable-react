@@ -1,0 +1,22 @@
+
+.navbar__responsive_title{
+    display: none;
+}
+
+@media (max-width:1133px){
+    .navbar{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        .navbar__title{
+            font-size: 11px;
+            display: none;
+        }
+        .navbar__responsive_title{
+            display: block;
+            font-size: 11px;
+        }
+    }
+}

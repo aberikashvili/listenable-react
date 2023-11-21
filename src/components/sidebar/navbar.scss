@@ -1,0 +1,25 @@
+@import "../../mixin.scss";
+.sidebar__responsive_logo{
+    display: none
+}
+.nav__text{
+    @include NavBarText;
+}
+.sidebar__container{
+    max-width:252px;
+}
+
+
+@media (max-width:1133px){
+    .sidebar__container{
+        max-width: 100px;
+    }
+    .sidebar__responsive_logo{
+        display:block;
+        padding: 28px 72px 0px 17px;
+        cursor: pointer ;
+    }
+    .sidebar__logo{
+        display: none;
+    }
+}

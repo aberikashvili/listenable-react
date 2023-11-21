@@ -2,8 +2,9 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useState, createContext, useContext } from 'react';
-import music from '../img/music.png'
+import music from '../images/music.png'
 import '../Css/song.scss';
+
 interface Track {
   name: string;
   listeners: number;
@@ -53,7 +54,7 @@ function PopularSegment() {
      
         <div className="container">
          
-            <h3 className="first-element">Popular Episodes</h3>
+            <h3 className="first-element">Popular Segments</h3>
           
           <ul className="song-list">
             {songs.map((song, index) => (
@@ -64,7 +65,6 @@ function PopularSegment() {
                 
                   <p className="song-retention"> <span style={{color: 'grey'}}>5min retention: </span> {song.retentionAmount} %</p>
                   <p className="retention-amount"> <span style={{color: 'grey'}}>Retention rate:</span> {song.retentionRate} %</p>
-                  {/* Display view count */}
                   <p className="view-count"> <span style={{color: 'grey'}}>View count: </span> {song.viewCount} K</p>
                
               </li>
@@ -76,17 +76,3 @@ function PopularSegment() {
   );
 }
 export default PopularSegment;
-
-
-
-
-
-
-
-
-
-
-
-
-
-

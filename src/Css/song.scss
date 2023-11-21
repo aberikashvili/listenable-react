@@ -1,10 +1,16 @@
+
 .container {
   display: flex;
   flex-wrap: wrap;
+  margin-left: 270px;
+  position: relative;
+  margin-top: -600px;
+  
 }
 
 .first-element {
   width: 100%;
+  margin-left: 20px;
 }
 
 .song-list {
@@ -35,8 +41,8 @@
 .retention-amount,
 .view-count {
   flex: 1;
-  // width: 20%; 
-  margin-left: 170px;
+  // width: -90px; 
+  margin-left: 190px;
   border: 1px solid #a7a7a7;
   border-radius: 5px;
   padding: 5px;
