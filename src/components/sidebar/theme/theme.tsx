@@ -4,6 +4,10 @@ import { Box, Typography } from "@mui/material";
 import "./theme.scss";
 // import useStore
 import { useStore } from "../../../utils/conextapi/useStore";
+// importing ThemeImages
+import sunImage from "../../../images/Group 630.png"
+import moonImage from "../../../images/Group 631.png"
+
 function Theme() {
   const { isThemeChange, setIsThemeChange } = useStore();
 
@@ -40,7 +44,7 @@ function Theme() {
         >
           <img
             style={{ marginRight: "6px" }}
-            src="/src/images/Group 630.png"
+            src={sunImage}
             alt=""
           />
           <Typography
@@ -85,7 +89,7 @@ function Theme() {
         >
           <img
             style={{ marginRight: "6px" }}
-            src="/src/images/Group 631.png"
+            src={moonImage}
             alt=""
           />
           <Typography

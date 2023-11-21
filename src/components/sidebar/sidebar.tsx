@@ -1,4 +1,4 @@
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 import "../../mixin.scss";
 import "./navbar.scss";
 // importing mui
@@ -12,9 +12,9 @@ import ComputerIcon from "../../Icons/Computer";
 import MicrophoneIcon from "../../Icons/Microphone";
 import Home from "../../Icons/Home";
 
-// import Images 
-import Logo from "../../images/Logo.png"
-import RespLogo from "../../images/responsvieLogo.png"
+// import Images
+import Logo from "../../images/Logo.png";
+import RespLogo from "../../images/responsvieLogo.png";
 
 import Navbar from "./navbar/navbar";
 import { useStore } from "../../utils/conextapi/useStore";
@@ -57,18 +57,12 @@ export default function Sidebar() {
           src={Logo}
           alt=""
         />
-        <img
-          className="sidebar__responsive_logo"
-          src={RespLogo}
-        />
+        <img className="sidebar__responsive_logo" src={RespLogo} />
       </Link>
       <Box sx={{ marginTop: "60px" }}>
         {/* Title Here */}
         <Box>
-          <Typography
-            sx={{ marginLeft: "16px" }}
-            className="nav__text"
-          >
+          <Typography sx={{ marginLeft: "16px" }} className="nav__text">
             Navigation
           </Typography>
         </Box>
@@ -96,28 +90,44 @@ export default function Sidebar() {
             active={currectPage === "demographics"}
           />
         </Link>
-        <Link style={{ textDecoration: "none" }} to={"/popularsegment"}>
+        <Link
+          onClick={() => setCurrectPage("popularsegment")}
+          to={"/popularsegment"}
+          style={{ textDecoration: "none" }}
+        >
           <Navbar
             Title={windowWidth > 1133 ? "Popular Segments" : "Segments"}
             Icon={<PlayListIcon />}
-            active={currectPage === "Popular Segments"}
+            active={currectPage === "popularsegment"}
           />
         </Link>
-        <Link style={{ textDecoration: "none" }} to={"popularepisodes"}>
+        <Link
+          style={{ textDecoration: "none" }}
+          to={"/popularepisodes"}
+          onClick={() => setCurrectPage("popularepisodes")}
+        >
           <Navbar
             Title={windowWidth > 1133 ? "Popular Episodes" : "Episodes"}
             Icon={<AudioIcon />}
             active={currectPage === "Popular Episodes"}
           />
         </Link>
-        <Link style={{ textDecoration: "none" }} to={"/generaltrafic"}>
+        <Link
+          style={{ textDecoration: "none" }}
+          to={"/generaltraffic"}
+          onClick={() => setCurrectPage("generaltraffic")}
+        >
           <Navbar
             Title={windowWidth > 1133 ? "General Traffic" : "Traffic"}
             Icon={<ComputerIcon />}
-            active={currectPage === "General Traffic"}
+            active={currectPage === "generaltraffic"}
           />
         </Link>
-        <Link style={{ textDecoration: "none" }} to={"/populartopics"}>
+        <Link
+          style={{ textDecoration: "none" }}
+          to={"/populartopics"}
+          onClick={() => setCurrectPage("populartopics")}
+        >
           <Navbar
             Title={windowWidth > 1133 ? "Popular Topics" : "Topics"}
             Icon={<MicrophoneIcon />}

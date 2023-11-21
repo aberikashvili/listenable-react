@@ -5,6 +5,10 @@ import Demographics from "./components/demographics/demographics";
 import { useEffect } from "react";
 import { Box } from "@mui/material";
 import { useStore } from "./utils/conextapi/useStore";
+import { GeneralTraffic } from "./components/generaltraffic/generaltraffic";
+import PopularSegment from "./components/popularsegment/popularsegment";
+import PopularEpisodes from "./components/popularepisode/popularepisode";
+import Populartopics from "./components/populartopic/populartopic";
 
 function App() {
   const { isThemeChange } = useStore();
@@ -19,6 +23,10 @@ function App() {
       <Routes>
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/demographics" element={<Demographics />} />
+        <Route path="/PopularSegment" element={<PopularSegment />} />
+        <Route path="/PopularEpisodes" element={<PopularEpisodes />} />
+        <Route path="/generaltraffic" element={<GeneralTraffic />} />
+        <Route path="/Populartopics" element={<Populartopics/>} />
       </Routes>
     </Box>
   );
