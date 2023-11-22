@@ -1,0 +1,35 @@
+@import "../../../../mixin.scss";
+
+.logout__container {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  width: 400px;
+  box-shadow: 1px 1px 65px -17px;
+  border-radius: 10px;
+  background-color: white;
+}
+.logout__images {
+  position: relative;
+  margin-top: 30px;
+}
+.logout__icon {
+  position: absolute;
+  left: 11px;
+  top: 19px;
+}
+.logout__title {
+  font-weight: 600 !important;
+  @include NavBarText;
+}
+
+.logout__body {
+  width: 300px;
+  @include NavBarText;
+  font-size: 14px !important;
+}
+.buttons__container{
+  margin-top: 30px;
+  display: flex;
+  gap: 17px;
+}
