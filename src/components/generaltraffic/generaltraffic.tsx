@@ -12,12 +12,10 @@ import {
 } from "chart.js";
 import { Line, getElementsAtEvent } from "react-chartjs-2";
 import Box from "@mui/material/Box";
-import Sidebar from "../sidebar/sidebar";
-
+import { useStore } from "../../utils/conextapi/useStore";
 import { data, downloadBackEndData, listeningBackEndData } from "./trafficInfo";
 import { options } from "./trafficInfo";
 import { Typography } from "@mui/material";
-import CalendarSide from "./calendar/calendar";
 
 ChartJS.register(
   CategoryScale,
@@ -31,6 +29,8 @@ ChartJS.register(
 
 export function GeneralTraffic() {
   const chartRef = useRef<any>(null);
+
+  const { isThemeChange } = useStore();
 
   const onClick = (event: any) => {
     const elements = getElementsAtEvent(chartRef.current, event);
@@ -46,18 +46,30 @@ export function GeneralTraffic() {
   };
   return (
     <Box sx={{ display: "flex" }}>
-      <Sidebar />
+      {/* <Sidebar /> */}
       <Box>
         <Box
-          sx={{
-            display: "flex",
-            height: "326px",
-            width: "1156px",
-            margin: "16px",
-            border: "1px solid rgba(240, 240, 240, 1)",
-            padding: "5px",
-            borderRadius: "10px",
-          }}
+          sx={
+            isThemeChange
+              ? {
+                  display: "flex",
+                  height: "326px",
+                  width: "1156px",
+                  margin: "16px",
+                  border: "1px solid rgba(240, 240, 240, 1)",
+                  padding: "5px",
+                  borderRadius: "10px",
+                }
+              : {
+                  display: "flex",
+                  height: "326px",
+                  width: "1156px",
+                  margin: "16px",
+                  border: "1px solid rgba(52, 52, 52, 1)",
+                  padding: "5px",
+                  borderRadius: "10px",
+                }
+          }
         >
           <Line
             width={"1051px"}
@@ -77,7 +89,15 @@ export function GeneralTraffic() {
         >
           {/* tite */}
           <Box
-            sx={{ border: "1px solid rgba(240, 240, 240, 1)", width: "570px" }}
+            sx={isThemeChange ? {
+              border: "1px solid rgba(240, 240, 240, 1)",
+              width: "570px",
+              borderRadius: "10px",
+            } : {
+              border: "1px solid rgba(52, 52, 52, 1)",
+              width: "570px",
+              borderRadius: "10px",
+            }}
           >
             <Box
               sx={{
@@ -87,21 +107,25 @@ export function GeneralTraffic() {
               }}
             >
               <Typography
-                sx={{
+                sx={isThemeChange ? {
                   color: "rgba(18, 17, 17, 1)",
+                  fontSize: "16px",
+                  fontWeight: "600",
+                } : {
+                  color: "white",
                   fontSize: "16px",
                   fontWeight: "600",
                 }}
               >
                 Most disruptive episodes
               </Typography>
-              <span>11amto06pm</span>
+              <span style={isThemeChange ? {} : {color:"white"}}>11amto06pm</span>
             </Box>
             {/* There is Map */}
             {listeningBackEndData.map((eachData) => {
               return (
                 <Box
-                key={eachData.id}
+                  key={eachData.id}
                   sx={{
                     display: "flex",
                     alignItems: "center",
@@ -111,8 +135,12 @@ export function GeneralTraffic() {
                 >
                   <img src={eachData.img} alt="" />
                   <span
-                    style={{
+                    style={isThemeChange ? {
                       color: "rgba(18, 17, 17, 1)",
+                      fontSize: "14px",
+                      marginRight: "40px",
+                    } : {
+                      color: "white",
                       fontSize: "14px",
                       marginRight: "40px",
                     }}
@@ -125,7 +153,15 @@ export function GeneralTraffic() {
             })}
           </Box>
           <Box
-            sx={{ border: "1px solid rgba(240, 240, 240, 1)", width: "570px" }}
+            sx={isThemeChange ? {
+              border: "1px solid rgba(240, 240, 240, 1)",
+              width: "570px",
+              borderRadius: "10px",
+            } : {
+              border: "1px solid rgba(52, 52, 52, 1)",
+              width: "570px",
+              borderRadius: "10px",
+            }}
           >
             <Box
               sx={{
@@ -135,21 +171,25 @@ export function GeneralTraffic() {
               }}
             >
               <Typography
-                sx={{
+                sx={isThemeChange ? {
                   color: "rgba(18, 17, 17, 1)",
+                  fontSize: "16px",
+                  fontWeight: "600",
+                } : {
+                  color: "white",
                   fontSize: "16px",
                   fontWeight: "600",
                 }}
               >
                 Less disruptive episodes
               </Typography>
-              <span>11amto06pm</span>
+              <span style={isThemeChange ? {} : {color:"white"}}>11amto06pm</span>
             </Box>
             {/* There is Map */}
             {listeningBackEndData.map((eachData) => {
               return (
                 <Box
-                key={eachData.id}
+                  key={eachData.id}
                   sx={{
                     display: "flex",
                     alignItems: "center",
@@ -159,8 +199,12 @@ export function GeneralTraffic() {
                 >
                   <img src={eachData.img} alt="" />
                   <span
-                    style={{
+                    style={isThemeChange ? {
                       color: "rgba(18, 17, 17, 1)",
+                      fontSize: "14px",
+                      marginRight: "40px",
+                    } : {
+                      color: "white",
                       fontSize: "14px",
                       marginRight: "40px",
                     }}
@@ -174,7 +218,7 @@ export function GeneralTraffic() {
           </Box>
         </Box>
       </Box>
-      <CalendarSide/>
+      {/* <CalendarSide/> */}
     </Box>
   );
 }

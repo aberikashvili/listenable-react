@@ -109,7 +109,7 @@ export default function Sidebar() {
           <Navbar
             Title={windowWidth > 1133 ? "Popular Episodes" : "Episodes"}
             Icon={<AudioIcon />}
-            active={currectPage === "Popular Episodes"}
+            active={currectPage === "popularepisodes"}
           />
         </Link>
         <Link
@@ -131,7 +131,7 @@ export default function Sidebar() {
           <Navbar
             Title={windowWidth > 1133 ? "Popular Topics" : "Topics"}
             Icon={<MicrophoneIcon />}
-            active={currectPage === "Popular Topics"}
+            active={currectPage === "populartopics"}
           />
         </Link>
       </Box>

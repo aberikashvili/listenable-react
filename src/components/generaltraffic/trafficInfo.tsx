@@ -1,4 +1,3 @@
-
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import firstImage from "../../images/ForExample/Bg.png";
 import secondImage from "../../images/ForExample/Bg-1.png";
@@ -121,12 +120,18 @@ export const options = {
     legend: {
       position: "bottom" as const,
       align: "start" as const,
+      labels:{
+        color:"white" 
+      }
     },
     title: {
       display: true,
       text: "General Traffic",
       align: "start" as const,
-      margin: "25px" as const,
+      color:"white" as const,
+      labels:{
+        color:""
+      }
     },
     tooltip: {
       callbacks: {
@@ -147,7 +152,13 @@ export const options = {
       max: 100,
       ticks: {
         stepSize: 40,
+        color:"white"
       },
     },
+    x:{
+      ticks:{
+        color:"white"
+      }
+    }
   },
 };

@@ -6,9 +6,11 @@ import { useEffect } from "react";
 import { Box } from "@mui/material";
 import { useStore } from "./utils/conextapi/useStore";
 import { GeneralTraffic } from "./components/generaltraffic/generaltraffic";
-import PopularSegment from "./components/popularsegment/popularsegment";
+// import PopularSegment from "./components/popularsegment/popularsegment";
 import PopularEpisodes from "./components/popularepisode/popularepisode";
 import Populartopics from "./components/populartopic/populartopic";
+import Sidebar from "./components/sidebar/sidebar";
+import PopularSegment from "./components/popularsegmets/popularsegmets";
 
 function App() {
   const { isThemeChange } = useStore();
@@ -19,7 +21,8 @@ function App() {
   }, []);
 
   return (
-    <Box sx={isThemeChange ? {} : { background: "rgba(30, 30, 30, 1)" }}>
+    <Box sx={isThemeChange ? {display:"flex"} : { background: "rgba(30, 30, 30, 1)",display:"flex" }}>
+      <Sidebar/>
       <Routes>
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/demographics" element={<Demographics />} />
