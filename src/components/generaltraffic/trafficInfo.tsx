@@ -3,7 +3,6 @@ import firstImage from "../../images/ForExample/Bg.png";
 import secondImage from "../../images/ForExample/Bg-1.png";
 import therdImage from "../../images/ForExample/Bg-2.png";
 import forthImage from "../../images/ForExample/Bg-3.png";
-
 const labels = ["January", "February", "March", "April", "May", "June", "July"];
 export const listeningBackEndData = [
   {
@@ -121,17 +120,14 @@ export const options = {
       position: "bottom" as const,
       align: "start" as const,
       labels:{
-        color:"white" 
+        // color:"white" 
       }
     },
     title: {
       display: true,
       text: "General Traffic",
       align: "start" as const,
-      color:"white" as const,
-      labels:{
-        color:""
-      }
+      // color:"white" as const,
     },
     tooltip: {
       callbacks: {
@@ -152,12 +148,12 @@ export const options = {
       max: 100,
       ticks: {
         stepSize: 40,
-        color:"white"
+        // color: "blue"
       },
     },
     x:{
       ticks:{
-        color:"white"
+        // color:"white"
       }
     }
   },

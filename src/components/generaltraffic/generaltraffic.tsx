@@ -27,6 +27,8 @@ ChartJS.register(
   Legend
 );
 
+
+
 export function GeneralTraffic() {
   const chartRef = useRef<any>(null);
 
