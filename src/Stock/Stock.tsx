@@ -3,6 +3,7 @@ import '../Css/stockChart.scss'
 import { Line } from "react-chartjs-2";
 import { Chart as ChartJS, LineElement, CategoryScale, LinearScale, PointElement } from "chart.js";
 
+
 ChartJS.register(LineElement, CategoryScale, LinearScale, PointElement);
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 function Stock() {
@@ -42,9 +43,11 @@ function Stock() {
             <h5 className ="label-one" > Daily < ArrowDropDownIcon style={{cursor: 'pointer'}}/></h5>
             
         </div> */}
+      
          <h5 className ="label-one" > Daily < ArrowDropDownIcon style={{cursor: 'pointer'}}/></h5>
          <h4 className ="label-two" >General Traffic</h4>
          <p className ="label-three">   Downloads  </p>
+         <h4 className='label-five'> +3,8%</h4>
           <h4 className ="label-four"> 512K </h4>
       <Line data={data} options={options}></Line>
     </div>

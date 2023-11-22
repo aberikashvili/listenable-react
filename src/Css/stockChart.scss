@@ -13,18 +13,26 @@
   }
   .label-two {
     position: absolute;
-    left: -110px;
+    left: -220px;
     top: -70px;
   }
   .label-three {
     position: absolute;
-    left: -90px;
+    left: -200px;
     top: -20px;
     color: grey;
     font-size: 13px;
   }
   .label-four {
     position: absolute;
-    left: -80px;
+    left: -190px;
     top: -8px;
+  }
+  
+  .label-five{
+    position: absolute;
+    left: -110px;
+    top: -25px;
+    color: rgb(19, 230, 19);
+    font-size: 14px;
   }

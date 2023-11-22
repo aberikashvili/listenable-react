@@ -12,16 +12,24 @@
     color: grey;
     position: absolute;
     font-size: 14px;
-    left: -100px;
+    left: -195px;
     top: -11px;  
 }
 .second-chart-element{
     position: absolute;
-    left: -95px;
+    left: -190px;
     top: 5px;
 }
 .chart_statistics{
     position: absolute;
-    left: -5px;
+    left: -90px;
     top: 45px;
+    cursor: pointer;
+}
+.third_chart_element{
+    position: absolute;
+    color: red;
+    left: -120px;
+    top: -15px;
+    font-size: 14px;
 }

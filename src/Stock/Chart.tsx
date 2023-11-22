@@ -40,6 +40,7 @@ function Chart() {
     <div className="charts_container">
        <p className ="first__element">   Views </p>
        <h4 className='second__element'>512K </h4>
+       <h4 className='third__element'> -3,8%</h4>
       <Line data={data} options={options}></Line>
     </div>
   );

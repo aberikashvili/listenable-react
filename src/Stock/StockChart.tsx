@@ -41,7 +41,8 @@ function StockChart() {
     <div className="chart-container">
       <p className="chart_element" >Lis Time </p>
       <h4 className='second-chart-element'> 512K </h4>
-      <p className='chart_statistics'>All Stats <ArrowForwardIosIcon style={{position: "absolute", marginTop: "-3px", width: "20px", cursor: "pointer"}}/> </p>
+      <p className='chart_statistics'>All Stats <ArrowForwardIosIcon style={{position: "absolute", marginTop: "-3px", width: "15px", cursor: "pointer"}}/> </p>
+      <h4 className='third_chart_element'> +3,8%</h4>
       <Line data={data} options={options}></Line>
     </div>
   );

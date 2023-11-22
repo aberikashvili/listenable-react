@@ -1,15 +1,17 @@
 import PopularTopics from "./topics/PopularTopics";
-import StockChart from "./Stock/StockChart";
+// import StockChart from "./Stock/StockChart";
 import PopularSongs from "./Songs/PopularSongs";
-import Chart from "./Stock/Chart";
-import Stock from "./Stock/Stock";
+// import Chart from "./Stock/Chart";
+// import Stock from "./Stock/Stock";
+import ParentComponent from "./Stock/ParentComponent";
 
 function App() {
   return (
     <div className="import">
-      <Stock/>
+      <ParentComponent />
+      {/* <Stock/>
       <Chart />
-      <StockChart />
+      <StockChart /> */}
               <PopularTopics /> 
               <PopularSongs/>
            
