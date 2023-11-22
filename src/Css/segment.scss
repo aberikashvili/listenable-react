@@ -1,0 +1,72 @@
+// body{
+//     margin: 0;
+//     height: 100vh;
+//     display: flex;
+//     justify-content: flex-end;
+//     align-items: flex-end;
+//     padding: 330px 60px 40px 0;
+    
+// }
+.segment-container{
+    position: absolute;
+    top: 700px;
+    text-align: right;
+    right: 10px;
+    border: 1px solid rgb(230, 228, 228);
+    border-radius: 20px;
+    padding: 40px 180px 20px 20px;
+   
+    // justify-content: flex-end;
+    // align-items: flex-end;
+    // padding: 330px 60px 40px 0;
+    
+   
+}
+.Head-thingy{
+    display: flex;
+ 
+}
+.head-text{
+   right: 260px;
+    // font-weight: bold;
+    position: absolute;
+    top: -3px;
+    width: 120px;
+}
+.head-second-text{
+    color: grey;
+    right: 190px;
+    position: absolute;
+    top: 5px;
+    
+}
+.head-third-text{
+    right: 60px;
+    position: absolute;
+    top: -4px;
+}
+.musical-image
+{
+    height: 30px;
+    width: 30px;
+    float: left;
+    margin-right: 10px;
+}
+.article-title{
+    font-size: 15px;
+    right: 220px;
+    position: absolute;
+    margin-top: -30px;
+    // top: 30px
+}
+.article-source{
+    color: grey;
+    font-size: 15px;
+   
+}
+.article-list{
+    list-style-type: none;
+}
+.last-div{
+    clear: both;
+}

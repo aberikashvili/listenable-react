@@ -1,0 +1,35 @@
+.chart-container{
+    position: absolute;
+    top: 220px;
+    right: 30px;
+    width: 120px;
+    height: 400px;
+    // padding: 20px;
+    // border: 1px solid red;
+    
+}
+.chart_element{
+    color: grey;
+    position: absolute;
+    font-size: 14px;
+    left: -195px;
+    top: -11px;  
+}
+.second-chart-element{
+    position: absolute;
+    left: -190px;
+    top: 5px;
+}
+.chart_statistics{
+    position: absolute;
+    left: -90px;
+    top: 45px;
+    cursor: pointer;
+}
+.third_chart_element{
+    position: absolute;
+    color: red;
+    left: -120px;
+    top: -15px;
+    font-size: 14px;
+}
