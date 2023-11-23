@@ -7,6 +7,7 @@ import { Box } from "@mui/material";
 import { useStore } from "./utils/useStore";
 import Episode from "./pages/episode/Episode";
 import ListenTime from "./pages/listening/ListenTime";
+import Segments from "./pages/episodeSegment/Segments";
 
 function App() {
   const { isThemeChange } = useStore();
@@ -23,6 +24,7 @@ function App() {
         <Route path="/demographics" element={<Demographics />} />
         <Route path="/episode/demographics" element={<Episode />} />
         <Route path="/episode/listening_time" element={<ListenTime />} />
+        <Route path="/episode/segments" element={<Segments />} />
       </Routes>
     </Box>
   );

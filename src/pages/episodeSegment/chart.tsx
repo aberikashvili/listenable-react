@@ -1,23 +1,21 @@
 import { BarChart } from "@mui/x-charts/BarChart";
 
 const Male = {
-  data: [2, 3, 1, 4, 5, 6, 7, 2],
+  data: [2, 3, 1, 4, 5],
   label: "Male",
 };
 const Female = {
-  data: [3, 1, 4, 2, 1, 4, 2, 7],
+  data: [3, 1, 4, 2, 1],
   label: "Female",
 };
 const Other = {
-  data: [1, 7, 3, 2, 1, 7, 2, 3],
+  data: [7, 7, 7, 7, 7],
   label: "Other",
 };
 function Charts() {
   return (
     <BarChart
-      width={725}
       height={300}
-      sx={{ borderRadius: "10px" }}
       series={[
         { ...Male, stack: "total" },
         { ...Female, stack: "total" },

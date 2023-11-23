@@ -1,14 +1,20 @@
 import { Box, Card, Typography } from "@mui/material";
-import NotPopular from "../../components/centralComponents/notPopular/NotPopular";
 import Sidebar from "../../components/sidebar/sidebar";
 import Charts from "./Charts";
 import EpisodeTable from "./Table";
 import { useStore } from "../../utils/useStore";
 import { Link } from "react-router-dom";
+import NextEpisode from "./NextEpisode";
 
 function Episode() {
   const { isThemeChange } = useStore();
   const table = [
+    { city: "New York", downloads: 1200, listeningTime: "12111m" },
+    {
+      city: "New Jersy",
+      downloads: 14000,
+      listeningTime: "34252m",
+    },
     { city: "New York", downloads: 1200, listeningTime: "12111m" },
     {
       city: "New Jersy",
@@ -28,13 +34,10 @@ function Episode() {
                   width: "1156px",
                   height: "505px",
                   margin: "16px",
-                  padding: "16px",
                 }
               : {
                   width: "1156px",
-                  height: "505px",
                   margin: "16px",
-                  padding: "16px",
                   background: "#1E1E1E",
                   border: "1px solid #343434",
                   color: "#ffffff",
@@ -58,6 +61,7 @@ function Episode() {
                       fontFamily: "roboto",
                       fontSize: "16px",
                       fontWeight: "500",
+                      marginBottom: "26px",
                     }
                   : {
                       color: "#fff",
@@ -179,9 +183,23 @@ function Episode() {
             </Box>
             <Box sx={{ display: "flex", gap: "30px", padding: "15px" }}>
               <Typography
-                sx={{ color: "#F155BD", fontSize: "16px", fontWeight: "500" }}
+                sx={{
+                  color: "#F155BD",
+                  fontSize: "16px",
+                  fontWeight: "500",
+                }}
               >
-                Demographics
+                Demographics{" "}
+                <span>
+                  <Box
+                    sx={{
+                      marginTop: "20px",
+                      width: "105px",
+                      height: " 2px",
+                      backgroundColor: "#F155BD",
+                    }}
+                  ></Box>
+                </span>
               </Typography>
               <Link
                 to={"/episode/listening_time"}
@@ -194,7 +212,8 @@ function Episode() {
               >
                 Listening time
               </Link>
-              <Typography
+              <Link
+                to={"/episode/segments"}
                 style={{
                   textDecoration: "none",
                   color: "#909090",
@@ -203,15 +222,16 @@ function Episode() {
                 }}
               >
                 Segments
-              </Typography>
+              </Link>
             </Box>
           </Box>
           <Box
             sx={{
+              width: "98%",
               display: "flex",
               justifyContent: "space-between",
               borderTop: "1px solid #EAEAEA",
-              paddingTop: "14px",
+              padding: "14px 0px 16px 0px",
             }}
           >
             <Charts />
@@ -229,7 +249,7 @@ function Episode() {
           </Box>
         </Card>
         <Box sx={{ padding: "15px" }}>
-          <NotPopular width={"1157px"} />
+          <NextEpisode width={"1157px"} />
         </Box>
       </Box>
     </Box>

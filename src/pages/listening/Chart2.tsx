@@ -7,7 +7,7 @@ import { PieChart } from "@mui/x-charts/PieChart";
 const pieParams = { height: 200, margin: { right: 5 } };
 const defaultColor = "#F3F5F8";
 
-const RetencionRate = () => {
+const RetencionRate = ({ theme }: any) => {
   //   const [hoveredValue, setHoveredValue] = useState(null);
   const totalPercentage = 100;
 
@@ -36,12 +36,21 @@ const RetencionRate = () => {
     <Stack width="100%" spacing={2}>
       <Box flexGrow={1}>
         <Typography
-          sx={{
-            color: "#000",
-            fontFamily: "roboto",
-            fontSize: "16px",
-            fontWeight: "500",
-          }}
+          sx={
+            theme
+              ? {
+                  color: "#000",
+                  fontFamily: "roboto",
+                  fontSize: "16px",
+                  fontWeight: "500",
+                }
+              : {
+                  color: "#FFF",
+                  fontFamily: "roboto",
+                  fontSize: "16px",
+                  fontWeight: "500",
+                }
+          }
         >
           Retention rate
         </Typography>
@@ -72,21 +81,37 @@ const RetencionRate = () => {
                 <PieChart
                   tooltip={{ trigger: "none" }}
                   series={[
-                    {
-                      data: [
-                        { value: item.percentage, color: item.color },
-                        {
-                          value: totalPercentage - item.percentage,
-                          color: defaultColor,
-                        },
-                      ],
+                    theme
+                      ? {
+                          data: [
+                            { value: item.percentage, color: item.color },
+                            {
+                              value: totalPercentage - item.percentage,
+                              color: defaultColor,
+                            },
+                          ],
 
-                      innerRadius: 95 - index * 10,
-                      outerRadius: 89 - index * 10,
-                      startAngle: -180,
-                      endAngle: 180,
-                      cornerRadius: 100,
-                    },
+                          innerRadius: 95 - index * 10,
+                          outerRadius: 89 - index * 10,
+                          startAngle: -180,
+                          endAngle: 180,
+                          cornerRadius: 100,
+                        }
+                      : {
+                          data: [
+                            { value: item.percentage, color: item.color },
+                            {
+                              value: totalPercentage - item.percentage,
+                              color: "#282828",
+                            },
+                          ],
+
+                          innerRadius: 95 - index * 10,
+                          outerRadius: 89 - index * 10,
+                          startAngle: -180,
+                          endAngle: 180,
+                          cornerRadius: 100,
+                        },
                   ]}
                   {...pieParams}
                 />
@@ -100,27 +125,48 @@ const RetencionRate = () => {
               }}
             >
               <Typography
-                sx={{
-                  fontSize: "26px",
-                  textAlign: "center",
-                  fontFamily: "roboto",
-                  fontWeight: "400",
-                  color: "#000",
-                }}
+                sx={
+                  theme
+                    ? {
+                        fontSize: "26px",
+                        textAlign: "center",
+                        fontFamily: "roboto",
+                        fontWeight: "400",
+                        color: "#000",
+                      }
+                    : {
+                        fontSize: "26px",
+                        textAlign: "center",
+                        fontFamily: "roboto",
+                        fontWeight: "400",
+                        color: "#FFF",
+                      }
+                }
               >
                 57%
               </Typography>
             </Box>
           </Box>
           <Typography
-            sx={{
-              fontSize: "14px",
-              width: "90px",
-              fontFamily: "roboto",
-              color: "#000",
-              fontWeight: "300",
-              marginBottom: "-200px",
-            }}
+            sx={
+              theme
+                ? {
+                    fontSize: "14px",
+                    width: "90px",
+                    fontFamily: "roboto",
+                    color: "#000",
+                    fontWeight: "300",
+                    marginBottom: "-200px",
+                  }
+                : {
+                    fontSize: "14px",
+                    width: "90px",
+                    fontFamily: "roboto",
+                    color: "#FFF",
+                    fontWeight: "300",
+                    marginBottom: "-200px",
+                  }
+            }
           >
             Slightly higher than average
           </Typography>

@@ -1,8 +1,8 @@
 import { Box, Card, Typography } from "@mui/material";
-import ControlledOpenSelect from "../popular/Select";
+import ControlledOpenSelect from "../../components/centralComponents/popular/Select";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { useStore } from "../../../utils/useStore";
+import { useStore } from "../../utils/useStore";
 
 type Item = {
   body: string;
@@ -11,7 +11,7 @@ type Item = {
   userId: number;
 };
 
-function NotPopular({ width }: any) {
+function NextEpisode({ width }: any) {
   const { isThemeChange } = useStore();
   const [items, setItems] = useState<Item[]>([]);
 
@@ -66,18 +66,7 @@ function NotPopular({ width }: any) {
       >
         <Typography sx={{ fontSize: "16px", fontWeight: "500" }}>
           {" "}
-          Not Poplar Segment
-          <span
-            style={{
-              marginLeft: "10px",
-              fontSize: "12px",
-              fontWeight: "300",
-              lineHeight: "14.06px",
-              color: "#909090",
-            }}
-          >
-            See all
-          </span>
+          Next Episode
         </Typography>
         <ControlledOpenSelect />
       </Box>
@@ -165,4 +154,4 @@ function NotPopular({ width }: any) {
   );
 }
 
-export default NotPopular;
+export default NextEpisode;

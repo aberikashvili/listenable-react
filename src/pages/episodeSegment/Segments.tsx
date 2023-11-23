@@ -1,23 +1,15 @@
 import { Box, Button, Card, Typography } from "@mui/material";
-import Sidebar from "../../components/sidebar/sidebar";
-import { useStore } from "../../utils/useStore";
-import Chart2 from "./Chart2";
 import { Link } from "react-router-dom";
+import Sidebar from "../../components/sidebar/sidebar";
+import Chart from "../episodeSegment/ChartLine";
+import { useStore } from "../../utils/useStore";
 import NextEpisode from "../episode/NextEpisode";
-import LinierChart from "./Chart";
-import { useState } from "react";
-import ChartPage from "./Chartpage";
-import DatePicker from "./calendar";
+import CalendarSide from "../listening/calendar";
 
-function ListenTime() {
+function Segments({ theme }: any) {
   const { isThemeChange } = useStore();
-  const [isChartLiner, setIsChartLiner] = useState<boolean>(false);
-
-  const handleChangeChart = () => {
-    setIsChartLiner(!isChartLiner);
-  };
   return (
-    <Box sx={{ display: "flex", zIndex: "20" }}>
+    <Box sx={{ display: "flex" }}>
       <Sidebar />
       <Box>
         <Card
@@ -173,28 +165,8 @@ function ListenTime() {
                 >
                   Demographics
                 </Link>
-                <Typography
-                  style={{
-                    textDecoration: "none",
-                    color: "#F155BD",
-                    fontSize: "16px",
-                    fontWeight: "400",
-                  }}
-                >
-                  Listening time
-                  <span>
-                    <Box
-                      sx={{
-                        marginTop: "20px",
-                        width: "100px",
-                        height: " 2px",
-                        backgroundColor: "#F155BD",
-                      }}
-                    ></Box>
-                  </span>
-                </Typography>
                 <Link
-                  to={"/episode/segments"}
+                  to={"/episode/listening_time"}
                   style={{
                     textDecoration: "none",
                     color: "#909090",
@@ -202,13 +174,32 @@ function ListenTime() {
                     fontWeight: "400",
                   }}
                 >
-                  Segments
+                  Listening time
                 </Link>
+                <Typography
+                  style={{
+                    color: "#F155BD",
+                    textDecoration: "none",
+                    fontSize: "16px",
+                    fontWeight: "400",
+                  }}
+                >
+                  Segments
+                  <span>
+                    <Box
+                      sx={{
+                        marginTop: "20px",
+                        width: "75px",
+                        height: " 2px",
+                        backgroundColor: "#F155BD",
+                      }}
+                    ></Box>
+                  </span>
+                </Typography>
               </Box>
-              <Box sx={{ display: "flex", alignItems: "center", gap: "10px" }}>
+              <Box sx={{ display: "flex", alignItems: "center", gap: "6px" }}>
                 {" "}
                 <Button
-                  onClick={() => handleChangeChart()}
                   sx={{
                     height: "24px",
                     color: "#909090",
@@ -222,45 +213,74 @@ function ListenTime() {
                     marginBottom: "-6px",
                   }}
                 >
-                  {isChartLiner ? "Chart" : "Linier Chart"}
+                  Chart
                 </Button>
-                <DatePicker />
+                <CalendarSide />
               </Box>
             </Box>
           </Box>
-          <Box>
-            {isChartLiner ? (
-              <LinierChart theme={isThemeChange} />
-            ) : (
-              <ChartPage />
-            )}
+          <Box
+            sx={{
+              paddingTop: "20px",
+              marginTop: "-50px",
+            }}
+          >
+            <Chart />
+            <Box
+              sx={{
+                paddingLeft: "26px",
+                display: "flex",
+                gap: "35px",
+              }}
+            >
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "6px",
+                }}
+              >
+                <Box
+                  sx={{
+                    width: "16px",
+                    height: "16px",
+                    border: "4px solid #009C99",
+                    background: "#fff",
+                  }}
+                ></Box>
+                <Typography
+                  sx={
+                    theme
+                      ? {
+                          color: "#121111",
+                          fontfamily: "Roboto",
+                          fontsize: "14px",
+                          fontstyle: "normal",
+                          fontweight: "400",
+                          lineheight: "normal",
+                        }
+                      : {
+                          color: "#909090",
+                          fontfamily: "Roboto",
+                          fontsize: "14px",
+                          fontstyle: "normal",
+                          fontweight: "400",
+                          lineheight: "normal",
+                        }
+                  }
+                >
+                  Listeners
+                </Typography>
+              </Box>
+            </Box>
           </Box>
         </Card>
-        <Box sx={{ display: "flex", justifyContent: "space-evenly" }}>
-          <NextEpisode width={"787px"} />
-
-          <Card
-            sx={
-              isThemeChange
-                ? {
-                    width: "354px",
-                    marginTop: "9px",
-                    padding: "16px",
-                  }
-                : {
-                    width: "354px",
-                    marginTop: "9px",
-                    padding: "16px",
-                    backgroundColor: "#1E1E1E",
-                  }
-            }
-          >
-            <Chart2 theme={isThemeChange} />
-          </Card>
+        <Box sx={{ padding: "15px" }}>
+          <NextEpisode width={"1157px"} />
         </Box>
       </Box>
     </Box>
   );
 }
 
-export default ListenTime;
+export default Segments;
