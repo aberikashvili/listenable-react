@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import Sidebar from "../sidebar/sidebar";
-import Demographics from "../Demographics/Demographics";
+import Demographics from "../Demographics/";
 
 function Dashboard() {
   return (

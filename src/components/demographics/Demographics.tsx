@@ -47,7 +47,7 @@ const offsets = {
   DC: [49, 21],
 };
 
-const MapChart = () => {
+const Demographics = () => {
   const [selectedState, setSelectedState] = useState("");
   const [hoveredState, setHoveredState] = useState(null);
   const handleMouseEnter = (geo: any) => {
@@ -307,4 +307,4 @@ const MapChart = () => {
   );
 };
 
-export default MapChart;
+export default Demographics;
