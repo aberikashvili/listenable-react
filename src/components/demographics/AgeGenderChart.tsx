@@ -10,7 +10,7 @@ import { Bar } from "react-chartjs-2";
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip);
 
-const chartStyle = { width: "700px", height: "337px" };
+const chartStyle = { width: "650px", height: "337px" };
 
 export const options = {
   responsive: true,
@@ -41,7 +41,7 @@ export const options = {
       borderRadius: 10,
     },
   },
-  barThickness: 50,
+  barThickness: 40,
 };
 
 const labels = [

@@ -1,116 +1,128 @@
-import { useState } from "react";
-import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
-import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
 import { PieChart } from "@mui/x-charts/PieChart";
+import { useDrawingArea } from "@mui/x-charts/hooks";
+import { styled } from "@mui/material/styles";
+import { Typography } from "@mui/material";
 
-const pieParams = { height: 200, margin: { right: 5 } };
 const defaultColor = "#F3F5F8";
 
- const RetencionRate = () =>{
-  const [hoveredValue, setHoveredValue] = useState(null);
-  const totalPercentage = 100;
+const StyledText = styled("text")(({ theme }) => ({
+  fill: theme.palette.text.primary,
+  textAnchor: "middle",
+  dominantBaseline: "central",
+  fontSize: 24,
+}));
 
-  const data = [
-    { value: 10, color: "#FF97C6" },
-    { value: 15, color: "#FFD971" },
-    { value: 20, color: "#DDB0F8" },
-    { value: 20, color: "#73FFCE" },
-    { value: 20, color: "#FFBF00" },
-    { value: 15, color: "#CDD4DF" },
-  ];
-
-  const totalValue = data.reduce((acc, item) => acc + item.value, 0);
-
-  const normalizedData = data.map((item) => ({
-    ...item,
-    percentage: (item.value / totalValue) * totalPercentage,
-  }));
-
-  // const handleBoxHover = (value: any) => {
-  //   setHoveredValue(value);
-  // };
-
-  // const handleBoxOut = () => {
-  //   setHoveredValue(null);
-  // };
-
+function PieCenterLabel({ children }: { children: React.ReactNode }) {
+  const { width, height, left, top } = useDrawingArea();
   return (
-    <Stack direction="row" width="90%" textAlign="center" spacing={2}>
-      <Box flexGrow={1}>
-        <Typography>Retention rate</Typography>
-        
-        <Box sx={{ position: "relative" }}>
-          {normalizedData.map((item, index) => (
-            <Box
-              key={index}
-              sx={{ position: "absolute", width: "100%" }}
-              // onMouseOver={() => handleBoxHover(totalValue)}
-              // onMouseOut={handleBoxOut}
-            >
-              <PieChart
-                tooltip={{ trigger: "none" }}
-                series={[
-                  {
-                    data: [
-                      { value: item.percentage, color: item.color },
-                      {
-                        value: totalPercentage - item.percentage,
-                        color: defaultColor,
-                      },
-                    ],
-
-                    innerRadius: 90 - index * 10,
-                    outerRadius: 100 - index * 10,
-                    startAngle: -180,
-                    endAngle: 180,
-                    cornerRadius: 100,
-                  },
-                ]}
-                {...pieParams}
-              />
-            </Box>
-          ))}
-          <Box
-            sx={{
-              position: "absolute",
-              top:'80px',
-              width:'100%',
-            }}
-          >
-            <Typography sx={{fontSize:'26px'}}>57%</Typography>
-          </Box>
-          <Box
-            sx={{
-              position: "absolute",
-              top:'80px',
-              width:'100%',
-            }}
-          >
-            <Typography sx={{fontSize:'14px', width:'100px'}}>Slightly higher than average</Typography>
-          </Box>
-          {/* {hoveredValue !== null && (
-            <div
-              style={{
-                position: "absolute",
-                top: "50%",
-                left: "50%",
-                transform: "translate(-50%, -50%)",
-                backgroundColor: "rgba(255, 255, 255, 0.9)",
-                padding: "8px",
-                borderRadius: "4px",
-                boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
-                zIndex: 1000,
-              }}
-            >
-              Hovered Value: {hoveredValue}
-            </div>
-          )} */}
-        </Box>
-        
-      </Box>
-    </Stack>
+    <StyledText x={left + width / 2} y={top + height / 2}>
+      {children}
+    </StyledText>
   );
 }
 
-export default RetencionRate
+const RetencionRate = () => {
+  const totalPercentage = 100;
+
+  const pieChartsParams = {
+    height: 400,
+    margin: { top: 50, bottom: 50 },
+    series: [
+      {
+        data: [{ value: 65, color: "#FF97C6" }],
+        label: "bar 1",
+      },
+      {
+        data: [{ value: 55, color: "#FFD971" }],
+        label: "bar 2",
+      },
+      {
+        data: [{ value: 45, color: "#DDB0F8" }],
+        label: "bar 3",
+      },
+      {
+        data: [{ value: 35, color: "#73FFCE" }],
+        label: "bar 4",
+      },
+      {
+        data: [{ value: 45, color: "#FFBF00" }],
+        label: "bar 5",
+      },
+      {
+        data: [{ value: 35, color: "#CDD4DF" }],
+        label: "bar 6",
+      },
+    ],
+  };
+
+  const totalValue = pieChartsParams.series.reduce((acc, bar) => {
+    const seriesTotal = bar.data.reduce(
+      (seriesAcc, item) => seriesAcc + item.value,
+      0
+    );
+    return acc + seriesTotal;
+  }, 0);
+
+  const normalizedData = pieChartsParams.series.map((bar) => ({
+    percentage: (bar.data[0]?.value / totalValue) * totalPercentage,
+    color: bar.data[0]?.color,
+  }));
+
+  return (
+    <Stack
+      direction={{ xs: "column", xl: "row" }}
+      spacing={2}
+      sx={{ width: "100%"}}
+    >
+      <Box
+      sx={{
+        flexGrow: 1,
+        
+        
+      }}
+      >
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent:'space-between',
+            width:'400px',
+            
+          }}
+        >
+          <PieChart
+            {...pieChartsParams}
+            series={pieChartsParams.series.map((_serie, index) => ({
+              data: [
+                {
+                  value: normalizedData[index]?.percentage,
+                  color: normalizedData[index]?.color,
+                },
+                {
+                  value: totalPercentage - normalizedData[index]?.percentage,
+                  color: defaultColor,
+                },
+              ],
+              innerRadius: 90 - index * 10,
+              outerRadius: 100 - index * 10,
+              endAngle: 180,
+              cornerRadius: 100,
+              startAngle: -180,
+            }))}
+          >
+            <PieCenterLabel>57%</PieCenterLabel>
+          </PieChart>
+          <Typography
+            sx={{ fontSize: "14px", color: "#121111", width: "150px" }}
+          >
+            Slightly higher than average
+          </Typography>
+        </Box>
+      </Box>
+    </Stack>
+  );
+};
+
+export default RetencionRate;

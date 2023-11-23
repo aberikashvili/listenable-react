@@ -59,7 +59,7 @@ const MapChart = () => {
   };
 
   const handleClick = (
-    event: React.MouseEvent<HTMLTableRowElement, MouseEvent>,
+    _event: React.MouseEvent<HTMLTableRowElement, MouseEvent>,
     id: string
   ) => {
     setSelectedState(id);
@@ -79,11 +79,33 @@ const MapChart = () => {
           Location
         </Typography>
         <Box className="date_filter">
-          <img src={Filter} alt="" />
-          <Button variant="outlined" size="small" sx={{ color: "#808080" }}>
+          <Button
+            variant="outlined"
+            sx={{
+              color: "#808080",
+              border: "1px solid  #F0F0F0",
+              fontSize: "12px",
+              width: "42px",
+              height: "26px",
+            }}
+          >
+            {" "}
+            <img src={Filter} alt="filter" width="19px" />
+          </Button>
+
+          <Button
+            variant="outlined"
+            sx={{
+              color: "#808080",
+              border: "1px solid  #F0F0F0",
+              fontSize: "12px",
+              width: "42px",
+              height: "26px",
+            }}
+          >
             Chart
           </Button>
-          <DatePicker/>
+          <DatePicker />
         </Box>
       </Box>
 
@@ -190,64 +212,96 @@ const MapChart = () => {
       <Box className="charts">
         <Box className="age_gender">
           <Box className="chart_description">
-            <Typography
-              sx={{ marginRight: "33px", fontSize: "16px", fontWeight: "700" }}
-            >
-              Age and Gender
-            </Typography>
-            <Box sx={{ display: "flex", gap: "30px" }}>
-              <Box sx={{ display: "flex", alignItems: "center", gap: "6px" }}>
-                <div
-                  style={{
-                    width: "16px",
-                    height: "16px",
-                    border: "4px solid #FFB264",
-                  }}
-                ></div>
-                <Typography>Male</Typography>
+            <Box sx={{ display: "flex", alignItems: "center", width: "60%" }}>
+              <Typography
+                sx={{
+                  marginRight: "33px",
+                  fontSize: "16px",
+                  fontWeight: "700",
+                }}
+              >
+                Age and Gender
+              </Typography>
+              <Box sx={{ display: "flex", gap: "30px" }}>
+                <Box sx={{ display: "flex", alignItems: "center", gap: "6px" }}>
+                  <div
+                    style={{
+                      width: "16px",
+                      height: "16px",
+                      border: "4px solid #FFB264",
+                    }}
+                  ></div>
+                  <Typography>Male</Typography>
+                </Box>
+                <Box sx={{ display: "flex", alignItems: "center", gap: "6px" }}>
+                  <div
+                    style={{
+                      width: "16px",
+                      height: "16px",
+                      border: "4px solid #FF6482",
+                    }}
+                  ></div>
+                  <Typography>Female</Typography>
+                </Box>
+                <Box sx={{ display: "flex", alignItems: "center", gap: "6px" }}>
+                  <div
+                    style={{
+                      width: "16px",
+                      height: "16px",
+                      border: "4px solid #009C99",
+                    }}
+                  ></div>
+                  <Typography>Other</Typography>
+                </Box>
               </Box>
-              <Box sx={{ display: "flex", alignItems: "center", gap: "6px" }}>
-                <div
-                  style={{
-                    width: "16px",
-                    height: "16px",
-                    border: "4px solid #FF6482",
-                  }}
-                ></div>
-                <Typography>Female</Typography>
-              </Box>
-              <Box sx={{ display: "flex", alignItems: "center", gap: "6px" }}>
-                <div
-                  style={{
-                    width: "16px",
-                    height: "16px",
-                    border: "4px solid #009C99",
-                  }}
-                ></div>
-                <Typography>Other</Typography>
-              </Box>
+            </Box>
+            <Box sx={{ display: "flex", alignItems: "center", width: "40%" }}>
+              <Typography
+                sx={{
+                  marginRight: "33px",
+                  fontSize: "16px",
+                  fontWeight: "700",
+                }}
+              >
+                Retencion Rate
+              </Typography>
             </Box>
           </Box>
           <Box
             className="chart_details"
             sx={{
               display: "flex",
-              width: "100%",
+              alignItems: "center",
               justifyContent: "space-between",
             }}
           >
-            <Box sx={{ width: "60%" }}>
+            <Box>
               <AgeGenderChart />
             </Box>
-            <Box sx={{ width: "40%" }}>
+            <Box
+              sx={{
+                width: "1px",
+                height: "199px",
+                backgroundColor: " #EAEAEA;",
+              }}
+            ></Box>
+            <Box sx={{ display: "flex", flexDirection: "column" }}>
               <RetencionRate />
             </Box>
           </Box>
         </Box>
       </Box>
-      <Box className='segments' sx={{display:'flex',  alignItems:'center', justifyContent:'space-between', marginTop:'13px'}}>
-        <PopEpisodes/>
-        <PopSegments/>
+      <Box
+        className="segments"
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          marginTop: "13px",
+        }}
+      >
+        <PopEpisodes />
+        <PopSegments />
       </Box>
     </Box>
   );

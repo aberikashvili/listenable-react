@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useStore } from "../../utils/conextapi/useStore";
-import { Box, Paper, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 export type PopEpisodes = {
   image: string;
@@ -34,7 +34,7 @@ const PopEpisodes = () => {
       >
         Popular episodes
       </Typography>
-      {popEpisodes.map((episode: any, index: number) => {
+      {popEpisodes.map((episode: any) => {
         return (
           <Box
             sx={{

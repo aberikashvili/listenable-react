@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useStore } from "../../utils/conextapi/useStore";
-import { Box, Paper, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 const PopSegments = () => {
   const { popSegments, setPopSegments } = useStore();
@@ -22,7 +22,7 @@ const PopSegments = () => {
       >
         Popular Segments
       </Typography>
-      {popSegments.map((episode: any, index: number) => {
+      {popSegments.map((episode: any,) => {
         return (
           <Box
             sx={{

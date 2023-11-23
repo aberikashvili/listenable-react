@@ -10,9 +10,9 @@ type StoreContextProps = {
   isOpen: boolean;
   setIsOpen: (open: boolean) => void;
   popEpisodes: PopEpisodes[];
-  setPopEpisodes: (open: boolean) => void;
+  setPopEpisodes: (popEpisodes: PopEpisodes[]) => void;
   popSegments: PopEpisodes[];
-  setPopSegments: (open: boolean) => void;
+  setPopSegments: (popSegments: PopEpisodes[]) => void;
 };
 
 export const StoreContext = createContext({} as StoreContextProps);
@@ -24,10 +24,10 @@ type StorProps = {
 };
 
 const StoreProvider = ({ children }: StorProps) => {
-  const [currectPage, setCurrectPage] = useState("dashboard");
-  const [popEpisodes, setPopEpisodes] = useState([]);
-  const [popSegments, setPopSegments] = useState([]);
-  const [isThemeChange, setIsThemeChange] = useState(true);
+  const [currectPage, setCurrectPage] = useState<string>("dashboard");
+  const [popEpisodes, setPopEpisodes] = useState<PopEpisodes[]>([]);
+  const [popSegments, setPopSegments] = useState<PopEpisodes[]>([]);
+  const [isThemeChange, setIsThemeChange] = useState<boolean>(true);
   const [isOpen, setIsOpen] = useState(false);
   const store = {
     currectPage,
