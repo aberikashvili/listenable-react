@@ -60,11 +60,13 @@ function PopularSegment() {
       <div className="calendari">
         <DateCalendar />
       </div>
+      <h3 className="first-element">Popular Segments</h3>
       <div className="container">
-        <h3 className="first-element">Popular Segments</h3>
+       
         <ul className="song-list">
           {songs.map((song, index) => (
             <li key={index} className="song-item">
+              
               <img className="song-picture" src={music} alt={song.name} />
 
               <p className="song-name">{song.name}</p>
