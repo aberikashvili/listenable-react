@@ -1,0 +1,59 @@
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -225px;
+  position: relative;
+  margin-top: 130px;
+  font-size: 13px;
+  
+}
+
+.first-element {
+  width: 100%;
+  // position: absolute;
+  margin-top: 100px;
+  margin-left: 10px;
+}
+
+.song-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 40px;
+}
+
+.song-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px; 
+}
+
+.song-picture {
+  width: 50px; 
+  height: auto;
+  margin-right: 20px; 
+}
+
+.song-name {
+  flex: 1;
+}
+
+.song-retention,
+.retention-amount,
+.view-count {
+  flex: 1;
+  // width: -90px; 
+  margin-left: 190px;
+  border: 1px solid #a7a7a7;
+  border-radius: 5px;
+  padding: 5px 1px ;
+  font-size: 14px;
+  width: -100%;
+
+}
+
+
+
