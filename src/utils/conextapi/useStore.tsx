@@ -1,6 +1,6 @@
 import { createContext, useContext, useState } from "react";
 import { CssBaseline } from "@mui/material";
-import { PopEpisodes } from "../../components/Demographics/PopEpisodes";
+import { PopEpisodesTypes } from "../../components/Demographics/PopEpisodes";
 
 type StoreContextProps = {
   currectPage: string;
@@ -9,10 +9,10 @@ type StoreContextProps = {
   setIsThemeChange: (themeChange: boolean) => void;
   isOpen: boolean;
   setIsOpen: (open: boolean) => void;
-  popEpisodes: PopEpisodes[];
-  setPopEpisodes: (popEpisodes: PopEpisodes[]) => void;
-  popSegments: PopEpisodes[];
-  setPopSegments: (popSegments: PopEpisodes[]) => void;
+  popEpisodes: PopEpisodesTypes[];
+  setPopEpisodes: (popEpisodes: PopEpisodesTypes[]) => void;
+  popSegments: PopEpisodesTypes[];
+  setPopSegments: (popSegments: PopEpisodesTypes[]) => void;
 };
 
 export const StoreContext = createContext({} as StoreContextProps);
@@ -25,8 +25,8 @@ type StorProps = {
 
 const StoreProvider = ({ children }: StorProps) => {
   const [currectPage, setCurrectPage] = useState<string>("dashboard");
-  const [popEpisodes, setPopEpisodes] = useState<PopEpisodes[]>([]);
-  const [popSegments, setPopSegments] = useState<PopEpisodes[]>([]);
+  const [popEpisodes, setPopEpisodes] = useState<PopEpisodesTypes[]>([]);
+  const [popSegments, setPopSegments] = useState<PopEpisodesTypes[]>([]);
   const [isThemeChange, setIsThemeChange] = useState<boolean>(true);
   const [isOpen, setIsOpen] = useState(false);
   const store = {

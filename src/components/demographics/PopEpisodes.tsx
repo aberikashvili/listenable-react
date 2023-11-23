@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useStore } from "../../utils/conextapi/useStore";
 import { Box, Typography } from "@mui/material";
 
-export type PopEpisodes = {
+export type PopEpisodesTypes = {
   image: string;
   title: string;
   downloads: string;

@@ -1,7 +1,7 @@
 import { Route, Routes, useNavigate } from "react-router-dom";
 import "./App.scss";
 import Dashboard from "./components/dashboard/dashboard";
-import Demographics from "./components/Demographics";
+import Demographics from "./components/Demographics/Demographics";
 import { useEffect } from "react";
 import { Box } from "@mui/material";
 import { useStore } from "./utils/conextapi/useStore";
