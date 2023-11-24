@@ -1,0 +1,58 @@
+[
+  {
+    "id": "1",
+    "name": "Programming Basics",
+    "image": "https://cdn.pixabay.com/photo/2013/07/13/09/46/basketball-155997_640.png",
+    "retentionRate": "90%",
+    "viewCount": "100k"
+  },
+  {
+    "id": "2",
+    "name": "Web Development",
+    "image": "https://cdn.pixabay.com/photo/2013/07/13/09/46/basketball-155997_640.png",
+    "retentionRate": "85%",
+    "viewCount": "120k"
+  },
+  {
+    "id": "3",
+    "name": "Data Science",
+    "image": "https://cdn.pixabay.com/photo/2013/07/13/09/46/basketball-155997_640.png",
+    "retentionRate": "88%",
+    "viewCount": "100k"
+  },
+  {
+    "id": "4",
+    "name": "Mobile App Development",
+    "image": "https://cdn.pixabay.com/photo/2013/07/13/09/46/basketball-155997_640.png",
+    "retentionRate": "92%",
+    "viewCount": "150k"
+  },
+  {
+    "id": "5",
+    "name": "Artificial Intelligence",
+    "image": "https://cdn.pixabay.com/photo/2013/07/13/09/46/basketball-155997_640.png",
+    "retentionRate": "87%",
+    "viewCount": "110k"
+  },
+  {
+    "id": "6",
+    "name": "Cybersecurity",
+    "image": "https://cdn.pixabay.com/photo/2013/07/13/09/46/basketball-155997_640.png",
+    "retentionRate": "91%",
+    "viewCount": "350k"
+  },
+  {
+    "id": "7",
+    "name": "UI/UX Design",
+    "image": "https://cdn.pixabay.com/photo/2013/07/13/09/46/basketball-155997_640.png",
+    "retentionRate": "89%",
+    "viewCount": "105k"
+  },
+  {
+    "id": "8",
+    "name": "Blockchain",
+    "image": "https://cdn.pixabay.com/photo/2013/07/13/09/46/basketball-155997_640.png",
+    "retentionRate": "86%",
+    "viewCount": "130k"
+  }
+]
