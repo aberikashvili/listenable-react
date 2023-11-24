@@ -1,6 +1,28 @@
 import { useState } from "react";
 import "./Map.scss";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
+
+// charts
+import { Bar, Pie } from "react-chartjs-2";
+
+import {
+  Chart as ChartJS,
+  LineElement,
+  ArcElement,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  BarElement,
+} from "chart.js";
+
+ChartJS.register(
+  BarElement,
+  ArcElement,
+  LineElement,
+  CategoryScale,
+  LinearScale,
+  PointElement
+);
 
 const USMapSvg = ({ handleMouseEnter, handleMouseLeave }: any) => {
   const handlePathHover = (e: any) => {
@@ -321,6 +343,67 @@ const Map = () => {
   const [info, setInfo] = useState("");
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
+  const data = {
+    labels: ["10-20", "20-30", "30-40", "40-50", "60+"],
+    datasets: [
+      {
+        label: "My First Dataset",
+        data: [65, 59, 80, 81, 56, 55, 40],
+        backgroundColor: [
+          "rgba(255, 99, 132, 0.2)",
+          "rgba(255, 159, 64, 0.2)",
+          "rgba(255, 205, 86, 0.2)",
+          "rgba(75, 192, 192, 0.2)",
+          "rgba(54, 162, 235, 0.2)",
+          "rgba(153, 102, 255, 0.2)",
+          "rgba(201, 203, 207, 0.2)",
+        ],
+        borderColor: [
+          "rgb(255, 99, 132)",
+          "rgb(255, 159, 64)",
+          "rgb(255, 205, 86)",
+          "rgb(75, 192, 192)",
+          "rgb(54, 162, 235)",
+          "rgb(153, 102, 255)",
+          "rgb(201, 203, 207)",
+        ],
+        borderWidth: 1,
+      },
+    ],
+  };
+
+  const options = {
+    scales: {
+      y: {
+        beginAtZero: true,
+      },
+    },
+  };
+
+  const pieData = {
+    labels: ["Male", "Femail"],
+    datasets: [
+      {
+        label: "Arm Sales",
+        data: [2, 4],
+        backgroundColor: [
+          "#F54EA2",
+          "#41b6e6",
+          "#FE9000",
+          "#7ebc59",
+          "#8134af",
+        ],
+        hoverBackgroundColor: [
+          "#b9006e",
+          "#005792",
+          "#C1292E",
+          "#2b9464",
+          "#42218E",
+        ],
+      },
+    ],
+  };
+
   const handleMouseEnter = (e: any) => {
     const stateInfo = e.target.getAttribute("data-info");
     setInfo(stateInfo);
@@ -335,10 +418,9 @@ const Map = () => {
   };
 
   return (
-    <Box sx={{ bottom: "30px", position: "relative" }}>
+    <Box mx={{ mb: 2 }} position="relative">
       {info && (
         <Box
-          className="info-box"
           sx={{
             position: "absolute",
             top: mousePosition.y,
@@ -349,9 +431,21 @@ const Map = () => {
             borderRadius: "5px",
             zIndex: 999,
           }}
-          dangerouslySetInnerHTML={{ __html: info }}
-        />
+        >
+          <Box id="info-box" dangerouslySetInnerHTML={{ __html: info }} />
+          <Box sx={{ display: "flex", gap: "40px" }}>
+            <Box sx={{ width: "304px", height: "180px" }}>
+              <Typography>Age</Typography>
+              <Bar data={data} options={options} />
+            </Box>
+            <Box sx={{ width: "250px", height: "150px" }}>
+              <Typography>Gender</Typography>
+              <Pie data={pieData} />
+            </Box>
+          </Box>
+        </Box>
       )}
+
       <USMapSvg
         handleMouseEnter={handleMouseEnter}
         handleMouseLeave={handleMouseLeave}
