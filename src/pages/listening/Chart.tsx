@@ -8,7 +8,7 @@ import { Box, Typography } from "@mui/material";
 const aData = [3000, 2000, 2780, 1890, 2390, 3490];
 const bData = [2400, 1398, 9800, 4800, 3800, 4300];
 const cData = [2400, 700, 8000, 4908, 1800, 6300];
-const xLabels = [" Jan", " Feb", " Mar", " Apr", " May", " Jun"];
+const xLabels = ["Jan", " Feb", " Mar", " Apr", " May", " Jun"];
 function Chart() {
   return (
     <ChartContainer
@@ -19,6 +19,7 @@ function Chart() {
         { data: bData, label: "uv", type: "line" },
         { data: cData, label: "uv", type: "line" },
       ]}
+      colors={["#1899CD", "#FFB264", "#009C99"]}
       xAxis={[{ scaleType: "band", data: xLabels }]}
     >
       <LinePlot />
