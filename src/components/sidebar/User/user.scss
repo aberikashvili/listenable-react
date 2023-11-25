@@ -1,0 +1,11 @@
+@import url("../../../mixin.scss");
+
+.user__text{
+    font-family: "Roboto", sans-serif;
+}
+
+@media (max-width:1133px){
+    .user__text{
+        display: none;
+    }
+}
