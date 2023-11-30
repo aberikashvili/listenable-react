@@ -1,0 +1,205 @@
+{
+    "states": [
+      {
+        "name": "Alabama",
+        "image": "public/map/states/Alabama (AL).svg"
+      },
+      {
+        "name": "Alaska",
+        "image": "public/map/states/Alaska (AK).svg"
+      },
+      {
+        "name": "Arizona",
+        "image": "public/map/states/Arizona (AZ).svg"
+      },
+      {
+        "name": "Arkansas",
+        "image": "public/map/states/Arkansas (AR).svg"
+      },
+      {
+        "name": "California",
+        "image": "public/map/states/California (CA).svg"
+      },
+      {
+        "name": "Colorado",
+        "image": "public/map/states/Colorado (CO).svg"
+      },
+      {
+        "name": "Connecticut",
+        "image": "public/map/states/Connecticut (CT).svg"
+      },
+      {
+        "name": "Delaware",
+        "image": "public/map/states/Delaware (DE).svg"
+      },
+      {
+        "name": "Florida",
+        "image": "public/map/states/Florida (FL).svg"
+      },
+      {
+        "name": "Georgia",
+        "image": "public/map/states/Georgia (GA).svg"
+      },
+      {
+        "name": "Hawaii",
+        "image": "public/map/states/Hawaii (HI).svg"
+      },
+      {
+        "name": "Idaho",
+        "image": "public/map/states/Idaho (ID).svg"
+      },
+      {
+        "name": "Illinois",
+        "image": "public/map/states/Illinois (IL).svg"
+      },
+      {
+        "name": "Indiana",
+        "image": "public/map/states/Indiana (IN).svg"
+      },
+      {
+        "name": "Iowa",
+        "image": "public/map/states/Iowa (IA).svg"
+      },
+      {
+        "name": "Kansas",
+        "image": "public/map/states/Kansas (KS).svg"
+      },
+      {
+        "name": "Kentucky",
+        "image": "public/map/states/Kentucky (KY).svg"
+      },
+      {
+        "name": "Louisiana",
+        "image": "public/map/states/Louisiana (LA).svg"
+      },
+      {
+        "name": "Maine",
+        "image": "public/map/states/Maine (ME).svg"
+      },
+      {
+        "name": "Maryland",
+        "image": "public/map/states/Maryland (MD).svg"
+      },
+      {
+        "name": "Massachusetts",
+        "image": "public/map/states/Massachusetts (MA).svg"
+      },
+      {
+        "name": "Michigan",
+        "image": "public/map/states/Michigan (MI).svg"
+      },
+      {
+        "name": "Minnesota",
+        "image": "public/map/states/Minnesota (MN).svg"
+      },
+      {
+        "name": "Mississippi",
+        "image": "public/map/states/Mississippi (MS).svg"
+      },
+      {
+        "name": "Missouri",
+        "image": "public/map/states/Missouri (MO).svg"
+      },
+      {
+        "name": "Montana",
+        "image": "public/map/states/Montana (MT).svg"
+      },
+      {
+        "name": "Nebraska",
+        "image": "public/map/states/Nebraska (NE).svg"
+      },
+      {
+        "name": "Nevada",
+        "image": "public/map/states/Nevada (NV).svg"
+      },
+      {
+        "name": "New Hampshire",
+        "image": "public/map/states/New-Hampshire (NH).svg"
+      },
+      {
+        "name": "New Jersey",
+        "image": "public/map/states/New-Jersey (NJ).svg"
+      },
+      {
+        "name": "New Mexico",
+        "image": "public/map/states/New-Mexico (NM).svg"
+      },
+      {
+        "name": "New York",
+        "image": "public/map/states/New-York (NY).svg"
+      },
+      {
+        "name": "North Carolina",
+        "image": "public/map/states/North-Carolina (NC).svg"
+      },
+      {
+        "name": "North Dakota",
+        "image": "public/map/states/North-Dakota (ND).svg"
+      },
+      {
+        "name": "Ohio",
+        "image": "public/map/states/Ohio (OH).svg"
+      },
+      {
+        "name": "Oklahoma",
+        "image": "public/map/states/Oklahoma (OK).svg"
+      },
+      {
+        "name": "Oregon",
+        "image": "public/map/states/Oregon (OR).svg"
+      },
+      {
+        "name": "Pennsylvania",
+        "image": "public/map/states/Pennsylvania (PA).svg"
+      },
+      {
+        "name": "Rhode Island",
+        "image": "public/map/states/Rhode-Island (RI).svg"
+      },
+      {
+        "name": "South Carolina",
+        "image": "public/map/states/South-Carolina (SC).svg"
+      },
+      {
+        "name": "South Dakota",
+        "image": "public/map/states/South-Dakota (SD).svg"
+      },
+      {
+        "name": "Tennessee",
+        "image": "public/map/states/Tennessee (TN).svg"
+      },
+      {
+        "name": "Texas",
+        "image": "public/map/states/Texas (TX).svg"
+      },
+      {
+        "name": "Utah",
+        "image": "public/map/states/Utah (UT).svg"
+      },
+      {
+        "name": "Vermont",
+        "image": "public/map/states/Vermont (VT).svg"
+      },
+      {
+        "name": "Virginia",
+        "image": "public/map/states/Virginia (VA).svg"
+      },
+      {
+        "name": "Washington",
+        "image": "public/map/states/Washington (WA).svg"
+      },
+      {
+        "name": "West Virginia",
+        "image": "public/map/states/West-Virginia (WV).svg"
+      },
+      {
+        "name": "Wisconsin",
+        "image": "public/map/states/Wisconsin (WI).svg"
+      },
+      {
+        "name": "Wyoming",
+        "image": "public/map/states/Wyoming (WY).svg"
+      }
+    ]
+  }
+  

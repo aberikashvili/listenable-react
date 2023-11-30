@@ -1,0 +1,49 @@
+.main_container {
+  width: 100%;
+  margin: 17px;
+  padding: 16px;
+  border: 2px solid lightgrey;
+  border-radius: 10px;
+
+  .map_container {
+    display: flex;
+    justify-content: space-between;
+    height: 332px;
+    margin-bottom: 12px;
+  }
+  .map {
+    width: 60%;
+  }
+}
+
+.date_filter {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: row;
+  width: 350px;
+  gap: 6px;
+  margin-top: 14px;
+}
+
+.states_info {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.charts {
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+
+  .age_gender {
+    margin-top: 23px;
+    width: 100%;
+    .chart_description {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}
