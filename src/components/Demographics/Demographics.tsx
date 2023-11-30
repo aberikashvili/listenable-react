@@ -1,11 +1,4 @@
-import { useEffect, useState } from "react";
-import { geoCentroid } from "d3-geo";
-import {
-  ComposableMap,
-  Geographies,
-  Geography,
-  Marker,
-} from "react-simple-maps";
+import { useState } from "react";
 
 import {
   Box,
@@ -30,32 +23,12 @@ import RetencionRate from "./RetencionRate";
 import PopEpisodes from "./PopEpisodes";
 import PopSegments from "./PopSegments";
 import DatePicker from "./DatePicker";
+import Map from "../Map/Map";
 
-const geoUrl = "https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json";
-
-const offsets = {
-  VT: [50, -8],
-  NH: [34, 2],
-  MA: [30, -1],
-  RI: [28, 2],
-  CT: [35, 10],
-  NJ: [34, 1],
-  DE: [33, 0],
-  MD: [47, 10],
-  DC: [49, 21],
-};
 
 const Demographics = () => {
-  const [allStates, setAllStates] = useState([])
   const [selectedState, setSelectedState] = useState("");
-  const [hoveredState, setHoveredState] = useState(null);
-  const handleMouseEnter = (geo: any) => {
-    setHoveredState(geo.id);
-  };
 
-  const handleMouseLeave = () => {
-    setHoveredState(null);
-  };
 
   const handleClick = (
     _event: React.MouseEvent<HTMLTableRowElement, MouseEvent>,
@@ -63,16 +36,6 @@ const Demographics = () => {
   ) => {
     setSelectedState(id);
   };
-
-  useEffect(() => {
-    try {
-      fetch("/public/map/usa.json")
-        .then((response) => response.json())
-        .then((json) => setAllStates(json));
-    } catch (error) {
-      console.log(error);
-    }
-  }, []);
   
   return (
     <Box className="main_container">
@@ -120,7 +83,7 @@ const Demographics = () => {
       </Box>
 
       <Box className="map_container">
-        <ComposableMap
+        {/* <ComposableMap
           projection="geoAlbersUsa"
           className="map"
           projectionConfig={{ scale: 1350 }}
@@ -179,8 +142,8 @@ const Demographics = () => {
               </>
             )}
           </Geographies>
-        </ComposableMap>
-
+        </ComposableMap> */}
+          <Map/>
         <Box className="states_info">
           <Paper sx={{ width: "182px", height: "263px", overflow: "hidden" }}>
             <TableContainer sx={{ maxHeight: 400 }}>

@@ -1,0 +1,26 @@
+#us-map {
+    display: block;
+    top: 0;
+    left: 0;
+    max-width: 450px;
+    max-height: 240px;
+  
+    path {
+      background-color: #bf0a30 !important;
+  
+      &:hover,
+      circle:hover {
+        stroke: #002868 !important;
+        stroke-width: 2px;
+        stroke-linejoin: round;
+        fill: #002868 !important;
+        cursor: pointer;
+      }
+    }
+  
+    #path67 {
+      fill: none !important;
+      stroke: white !important;
+      cursor: default;
+    }
+  }
