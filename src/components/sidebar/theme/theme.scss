@@ -1,0 +1,15 @@
+@import url("../../../mixin.scss");
+
+.theme__text{
+    display: flex;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    // color: rgba(18, 17, 17, 1);
+}
+
+
+@media (max-width:1133px){
+    .theme__text{
+        display: none;
+    }
+}
