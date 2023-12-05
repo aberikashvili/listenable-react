@@ -35,7 +35,7 @@ function App() {
         <Route path="/PopularSegment" element={<PopularSegment />} />
         <Route path="/PopularEpisodes" element={<PopularEpisodes />} />
         <Route path="/generaltraffic" element={<GeneralTraffic />} />
-        <Route path="/Topics" element={<Topics />} />
+        <Route path="/popularTopics" element={<Topics />} />
       </Routes>
     </Box>
   );

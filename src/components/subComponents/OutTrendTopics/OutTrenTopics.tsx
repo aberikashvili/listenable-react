@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { data, options } from "../../../public/ChartData";
+import { data, options } from "../../../../public/ChartData";
 import { Line } from "react-chartjs-2";
 import { Box, Typography, CardMedia } from "@mui/material";
 import "./OutTrenTopics.scss";
