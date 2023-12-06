@@ -1,0 +1,360 @@
+[
+  {
+    "id": "AL",
+    "name": "Alabama",
+    "val": "01",
+    "downloads": "2,345,300",
+    "tot_listen_time": "123112m"
+  },
+  {
+    "id": "AK",
+    "name": "Alaska",
+    "val": "02",
+    "downloads": "2,345,300",
+    "tot_listen_time": "123112m"
+  },
+  {
+    "id": "AZ",
+    "name": "Arizona",
+    "val": "04",
+    "downloads": "2,345,300",
+    "tot_listen_time": "123112m"
+  },
+  {
+    "id": "AR",
+    "name": "Arkansas",
+    "val": "05",
+    "downloads": "2,345,300",
+    "tot_listen_time": "123112m"
+  },
+  {
+    "id": "CA",
+    "name": "California",
+    "val": "06",
+    "downloads": "2,345,300",
+    "tot_listen_time": "123112m"
+  },
+  {
+    "id": "CO",
+    "name": "Colorado",
+    "val": "08",
+    "downloads": "2,345,300",
+    "tot_listen_time": "123112m"
+  },
+  {
+    "id": "CT",
+    "name": "Connecticut",
+    "val": "09",
+    "downloads": "2,345,300",
+    "tot_listen_time": "123112m"
+  },
+  {
+    "id": "DE",
+    "name": "Delaware",
+    "val": "10",
+    "downloads": "2,345,300",
+    "tot_listen_time": "123112m"
+  },
+
+  {
+    "id": "FL",
+    "name": "Florida",
+    "val": "12",
+    "downloads": "2,345,300",
+    "tot_listen_time": "123112m"
+  },
+
+  {
+    "id": "GA",
+    "name": "Georgia",
+    "val": "13",
+    "downloads": "2,345,300",
+    "tot_listen_time": "123112m"
+  },
+
+  {
+    "id": "HI",
+    "name": "Hawaii",
+    "val": "15",
+    "downloads": "2,345,300",
+    "tot_listen_time": "123112m"
+  },
+  {
+    "id": "ID",
+    "name": "Idaho",
+    "val": "16",
+    "downloads": "2,345,300",
+    "tot_listen_time": "123112m"
+  },
+  {
+    "id": "IL",
+    "name": "Illinois",
+    "val": "17",
+    "downloads": "2,345,300",
+    "tot_listen_time": "123112m"
+  },
+  {
+    "id": "IN",
+    "name": "Indiana",
+    "val": "18",
+    "downloads": "2,345,300",
+    "tot_listen_time": "123112m"
+  },
+  {
+    "id": "IA",
+    "name": "Iowa",
+    "val": "19",
+    "downloads": "2,345,300",
+    "tot_listen_time": "123112m"
+  },
+  {
+    "id": "KS",
+    "name": "Kansas",
+    "val": "20",
+    "downloads": "2,345,300",
+    "tot_listen_time": "123112m"
+  },
+  {
+    "id": "KY",
+    "name": "Kentucky",
+    "val": "21",
+    "downloads": "2,345,300",
+    "tot_listen_time": "123112m"
+  },
+  {
+    "id": "LA",
+    "name": "Louisiana",
+    "val": "22",
+    "downloads": "2,345,300",
+    "tot_listen_time": "123112m"
+  },
+  {
+    "id": "ME",
+    "name": "Maine",
+    "val": "23",
+    "downloads": "2,345,300",
+    "tot_listen_time": "123112m"
+  },
+
+  {
+    "id": "MD",
+    "name": "Maryland",
+    "val": "24",
+    "downloads": "2,345,300",
+    "tot_listen_time": "123112m"
+  },
+  {
+    "id": "MA",
+    "name": "Massachusetts",
+    "val": "25",
+    "downloads": "2,345,300",
+    "tot_listen_time": "123112m"
+  },
+  {
+    "id": "MI",
+    "name": "Michigan",
+    "val": "26",
+    "downloads": "2,345,300",
+    "tot_listen_time": "123112m"
+  },
+  {
+    "id": "MN",
+    "name": "Minnesota",
+    "val": "27",
+    "downloads": "2,345,300",
+    "tot_listen_time": "123112m"
+  },
+  {
+    "id": "MS",
+    "name": "Mississippi",
+    "val": "28",
+    "downloads": "2,345,300",
+    "tot_listen_time": "123112m"
+  },
+  {
+    "id": "MO",
+    "name": "Missouri",
+    "val": "29",
+    "downloads": "2,345,300",
+    "tot_listen_time": "123112m"
+  },
+  {
+    "id": "MT",
+    "name": "Montana",
+    "val": "30",
+    "downloads": "2,345,300",
+    "tot_listen_time": "123112m"
+  },
+  {
+    "id": "NE",
+    "name": "Nebraska",
+    "val": "31",
+    "downloads": "2,345,300",
+    "tot_listen_time": "123112m"
+  },
+  {
+    "id": "NV",
+    "name": "Nevada",
+    "val": "32",
+    "downloads": "2,345,300",
+    "tot_listen_time": "123112m"
+  },
+  {
+    "id": "NH",
+    "name": "New Hampshire",
+    "val": "33",
+    "downloads": "2,345,300",
+    "tot_listen_time": "123112m"
+  },
+  {
+    "id": "NJ",
+    "name": "New Jersey",
+    "val": "34",
+    "downloads": "2,345,300",
+    "tot_listen_time": "123112m"
+  },
+  {
+    "id": "NM",
+    "name": "New Mexico",
+    "val": "35",
+    "downloads": "2,345,300",
+    "tot_listen_time": "123112m"
+  },
+  {
+    "id": "NY",
+    "name": "New York",
+    "val": "36",
+    "downloads": "2,345,300",
+    "tot_listen_time": "123112m"
+  },
+  {
+    "id": "NC",
+    "name": "North Carolina",
+    "val": "37",
+    "downloads": "2,345,300",
+    "tot_listen_time": "123112m"
+  },
+  {
+    "id": "ND",
+    "name": "North Dakota",
+    "val": "38",
+    "downloads": "2,345,300",
+    "tot_listen_time": "123112m"
+  },
+
+  {
+    "id": "OH",
+    "name": "Ohio",
+    "val": "39",
+    "downloads": "2,345,300",
+    "tot_listen_time": "123112m"
+  },
+  {
+    "id": "OK",
+    "name": "Oklahoma",
+    "val": "40",
+    "downloads": "2,345,300",
+    "tot_listen_time": "123112m"
+  },
+  {
+    "id": "OR",
+    "name": "Oregon",
+    "val": "41",
+    "downloads": "2,345,300",
+    "tot_listen_time": "123112m"
+  },
+  {
+    "id": "PW",
+    "name": "Pennsylvania",
+    "val": "70",
+    "downloads": "2,345,300",
+    "tot_listen_time": "123112m"
+  },
+
+  {
+    "id": "RI",
+    "name": "Rhode Island",
+    "val": "44",
+    "downloads": "2,345,300",
+    "tot_listen_time": "123112m"
+  },
+  {
+    "id": "SC",
+    "name": "South Carolina",
+    "val": "45",
+    "downloads": "2,345,300",
+    "tot_listen_time": "123112m"
+  },
+  {
+    "id": "SD",
+    "name": "South Dakota",
+    "val": "46",
+    "downloads": "2,345,300",
+    "tot_listen_time": "123112m"
+  },
+  {
+    "id": "TN",
+    "name": "Tennessee",
+    "val": "47",
+    "downloads": "2,345,300",
+    "tot_listen_time": "123112m"
+  },
+  {
+    "id": "TX",
+    "name": "Texas",
+    "val": "48",
+    "downloads": "2,345,300",
+    "tot_listen_time": "123112m"
+  },
+
+  {
+    "id": "UT",
+    "name": "Utah",
+    "val": "49",
+    "downloads": "2,345,300",
+    "tot_listen_time": "123112m"
+  },
+  {
+    "id": "VT",
+    "name": "Vermont",
+    "val": "50",
+    "downloads": "2,345,300",
+    "tot_listen_time": "123112m"
+  },
+  {
+    "id": "VA",
+    "name": "Virginia",
+    "val": "51",
+    "downloads": "2,345,300",
+    "tot_listen_time": "123112m"
+  },
+
+  {
+    "id": "WA",
+    "name": "Washington",
+    "val": "53",
+    "downloads": "2,345,300",
+    "tot_listen_time": "123112m"
+  },
+  {
+    "id": "WV",
+    "name": "West Virginia",
+    "val": "54",
+    "downloads": "2,345,300",
+    "tot_listen_time": "123112m"
+  },
+  {
+    "id": "WI",
+    "name": "Wisconsin",
+    "val": "55",
+    "downloads": "2,345,300",
+    "tot_listen_time": "123112m"
+  },
+  {
+    "id": "WY",
+    "name": "Wyoming",
+    "val": "56",
+    "downloads": "2,345,300",
+    "tot_listen_time": "123112m"
+  }
+]
