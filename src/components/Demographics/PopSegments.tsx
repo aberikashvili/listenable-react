@@ -7,7 +7,7 @@ const PopSegments = () => {
 
   useEffect(() => {
     try {
-      fetch("/public/segments/segments.json")
+      fetch("/segments/segments.json")
         .then((response) => response.json())
         .then((json) => setPopSegments(json));
     } catch (error) {
