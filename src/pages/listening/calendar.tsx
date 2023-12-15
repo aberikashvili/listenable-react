@@ -4,7 +4,6 @@ import { DateRangePicker } from "@mui/x-date-pickers-pro/DateRangePicker";
 import { SingleInputDateRangeField } from "@mui/x-date-pickers-pro/SingleInputDateRangeField";
 import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
 import dayjs from "dayjs";
-import Calendar from "../../../public/icons/calendar_day.svg";
 
 const DatePicker = () => {
   const today = dayjs();
@@ -28,7 +27,7 @@ const DatePicker = () => {
                 },
                 startAdornment: (
                   <>
-                    <img src={Calendar} alt="calendar logo" />
+                    <img src="" alt="calendar logo" />
                   </>
                 ),
               },

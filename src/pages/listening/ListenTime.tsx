@@ -4,11 +4,10 @@ import { useStore } from "../../utils/useStore";
 import Chart2 from "./Chart2";
 import { Link } from "react-router-dom";
 import NextEpisode from "../episode/NextEpisode";
-import LinierChart from "./Chart";
 import { useState } from "react";
 import ChartPage from "./Chartpage";
 import DatePicker from "./calendar";
-
+import LinerChart from "./components/linerChart";
 function ListenTime() {
   const { isThemeChange } = useStore();
   const [isChartLiner, setIsChartLiner] = useState<boolean>(false);
@@ -230,7 +229,7 @@ function ListenTime() {
           </Box>
           <Box>
             {isChartLiner ? (
-              <LinierChart theme={isThemeChange} />
+              <LinerChart theme={isThemeChange} />
             ) : (
               <ChartPage />
             )}

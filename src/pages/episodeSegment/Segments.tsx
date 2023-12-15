@@ -1,10 +1,10 @@
 import { Box, Button, Card, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import Sidebar from "../../components/sidebar/sidebar";
-import Chart from "../episodeSegment/ChartLine";
 import { useStore } from "../../utils/useStore";
 import NextEpisode from "../episode/NextEpisode";
 import CalendarSide from "../listening/calendar";
+import SegmentLinerChart from "./SegmentLineChart";
 
 function Segments({ theme }: any) {
   const { isThemeChange } = useStore();
@@ -225,10 +225,11 @@ function Segments({ theme }: any) {
               marginTop: "-50px",
             }}
           >
-            <Chart />
+            <SegmentLinerChart />
             <Box
               sx={{
-                paddingLeft: "26px",
+                paddingTop: "10px",
+                paddingLeft: "45px",
                 display: "flex",
                 gap: "35px",
               }}
@@ -244,7 +245,7 @@ function Segments({ theme }: any) {
                   sx={{
                     width: "16px",
                     height: "16px",
-                    border: "4px solid #009C99",
+                    border: "4px solid #1899CD",
                     background: "#fff",
                   }}
                 ></Box>
